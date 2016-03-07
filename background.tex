@@ -12,6 +12,70 @@ utilization. It is very likely that you would need to explain
 the compression scheme, since most computer architecture
 researchers would not be familiar with it.
 
+%The speed of processors have been improving much faster than the
+%speed of memory and thus memory is not able to keep up with the
+%processors. Processors have to wait for too long if needed data
+%must be fetched from memory. Caches that are smaller, but faster
+%than main memory are thus used to store data which is in use by
+%the processor. As the cache needs to be a lot faster than main
+%memory, it has to be small to not be too expensive. Therefore it
+%is limited what can be stored in the cache
+
+With a simple cache, data is not fetched in to the cache before the
+processor needs the data or data in the same block. These misses
+are not possible to avoid without fetching blocks before the
+processor needs them (prefetching). There are many strategies
+available for deciding what to prefetch.
+
+\subsubsection{Sequential prefetching}
+
+The simplest for of prefetching is to just prefetch the next block
+as well when fetching a block the processor needs. This can
+sometimes be improved on by changing the prefetch distance (instead
+of prefetching the next block, prefetch the second or a later one).
+Sometimes the processor will need the next block before it is in
+the cache even if it was prefetched. In these cases prefetching a
+later block can improve performance.
+
+In addition, more than one block can be prefetched (increasing the
+prefetch degree). If the running program uses a lot of sequential
+memory this can improve performance. If too many blocks are
+prefetched, blocks that are still in use can be evicted from the
+cache, which can degrade performance.
+
+\subsubsection{Stride Directed Prefetching}
+
+With stride directed prefetching (SDP), the memory address an instruction
+accesses is stored together with the program counter address of the instruction
+and a valid bit is set. When an instruction is encountered again, the stride
+between the address accessed the last time, and the address accessed the
+current time is calculated. Then this stride is added to the address currently
+being accessed and the block containing the current address is prefetched.
+
+\subsubsection{Reference Prediction Tables}
+
+The reference prediction (RPT) method is similar to SDP, but in
+addition stores the stride and a state. The first time an
+instruction is encountered, the address is stored as in SDP, and
+in addition an initial state is set. The second time an instruction
+is encountered, the stride is calculated is in SDP and it is stored.
+The state changes to training. The next time the instruction is
+encountered, the stride is calculated again, and compared to the
+currently stored stride. If they are equal, the state changes to
+prefetching and the stride added to the current address is
+prefetched.
+
+\subsubsection{Global History Buffer}
+
+With a global history buffer (GHB), all the accesses by the same
+instructions are stored in a linked list. When the same
+instruction is encountered again, this list is traversed and the
+deltas between the addresses accessed are stored. Then the delta
+history is searched to see if a pair equal to the most recent pair
+of deltas exists. If such a pair is found, the next delta (or
+several of the next deltas) is added to the current address,
+and the result is prefetched.
+
 \subsection{Cache}
 
 L1 32 kB instruction and 64 kB data.
