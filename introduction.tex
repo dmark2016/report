@@ -1,9 +1,24 @@
 \section{Introduction}
-\subsection{Description}
-The introduction section introduces the larger research area
-the paper is a part of and illustrates the concrete problem(s) at
-hand the paper tries to solve. It explains the proposed solution
-from a 20.000 feet abstraction level. Furthermore, it states
-the contributions of the paper and briefly highlights its main
-results. It finishes with an outline of the paper, giving a short
-explanation of the contribution/meaning of each section.
+\label{sec:introduction}
+
+In modern computer architecture, the memory hierarchy plays an important part.
+Without intelligent usage of caches and scheduling of requests to main memory, the processor will spend an undesirable amount of time idle while waiting for data.
+Prefetching aims to reduce cache misses and increase data availability by attempting to predict which data will be needed in the future and fetch it early. \todo{rephrase}
+Designing a prefetcher that performs well for all programs is hard.
+Depending on the type of program, different memory access patterns arise, making it necessary for the prefetcher to be adaptive.
+
+In this paper, we present a prefetcher design that measurably increases performance for a wide range of program types.
+\todo{write hi-level overview of solution}
+
+This paper provides background (section~\ref{sec:background}) on various prefetcher strategies as well as an overview of our process and methodology (section~\ref{sec:methodology}).
+Subsequently, the finished prefetcher design is presented (section~\ref{sec:prefetcher}), followed by results and perfomance details (section~\ref{sec:results}).
+Finally, we discuss (section~\ref{sec:discussion}) our findings, provide an overview of some related works (section~\ref{sec:related-work}) and a conclusion (section~\ref{sec:conclusion}).
+\todo{better way of writing this?}
+
+%The introduction section introduces the larger research area
+%the paper is a part of and illustrates the concrete problem(s) at
+%hand the paper tries to solve. It explains the proposed solution
+%from a 20.000 feet abstraction level. Furthermore, it states
+%the contributions of the paper and briefly highlights its main
+%results. It finishes with an outline of the paper, giving a short
+%explanation of the contribution/meaning of each section.

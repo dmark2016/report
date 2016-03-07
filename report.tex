@@ -1,6 +1,9 @@
 \documentclass[technote]{IEEEtran}
 \usepackage{lipsum}
+\usepackage{todonotes}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\setlength{\marginparwidth}{1.3cm}
 
 \begin{document}
 
@@ -29,10 +32,11 @@
 The abstract goes here.
 \end{abstract}
 
+\listoftodos
 \input{introduction}
 \input{background}
-\input{prefetcher}
 \input{methodology}
+\input{prefetcher}
 \input{results}
 \input{discussion}
 \input{related-work}
