@@ -1,13 +1,28 @@
 \section{Methodology}
 \label{sec:methodology}
 \subsection{Description}
-The methodology section explains your experimental setup.
-It should state every bit of information that is necessary in
-order to be able to reproduce your results. It further covers
-your actions taken in order to ensure that you are really
-measuring what you think you are measuring as well as your
-actions that were taken in order to validate your results. The
-goals are to set up realistic experiments and be absolutely
-convinced that you took care of all side-effects as well as to
-state enough information such that your experiments are fully
-reproducible.
+% The methodology section explains your experimental setup.
+% It should state every bit of information that is necessary in
+% order to be able to reproduce your results. It further covers
+% your actions taken in order to ensure that you are really
+% measuring what you think you are measuring as well as your
+% actions that were taken in order to validate your results. The
+% goals are to set up realistic experiments and be absolutely
+% convinced that you took care of all side-effects as well as to
+% state enough information such that your experiments are fully
+% reproducible.
+
+\todo{What goal? Mention accuracy and coverage?}
+In order to determine whether the goal had been reached, a method of evaluating the developed prefetchers was required.
+During this project, the evaluation was done using the M5 computer architecture simulator running a SPEC CPU2000 benchmark compiled for an ALPHA architecture.
+The prefetchers were implemented in C and compiled into the simulator before running the benchmark.
+
+The benchmark used was assumed to be representative of a normal computer workload, and a speedup of 0.95 or less was assumed to be a significant degradation.
+Thus the average speedup was used as a performance measure, given that no single benchmark dropped below a speedup of 0.95, was used for prefetcher evaluation.
+
+Several classical prefetchers were implemented, tested and evaluated to provide a solid starting point.
+First, a simple direct prefetcher (SPD) was tested, followed by a reference table prefetcher (RTP) and finally a global history buffer (GHB) with delta correlation.
+
+Next, the GHB implementation was extended to also include RTP and ultimately SPD as fall backs whenever the delta correlation did not result in any prefetches being performed.
+
+When testing each prefetcher, the relevant aggressiveness was adjusted (within reasonable limits) for best average speedup.
