@@ -1,6 +1,6 @@
 \section{Results}
 \label{sec:results}
-\subsection{Description}
+% \subsection{Description}
 % This section presents the results of your experiments,
 % comparing your solution to other schemes. The metrics of
 % interest are highly dependent on the topic of research, but
@@ -13,19 +13,37 @@
 % better/worse compared to the other schemes. Thus, this section
 % consists of two parts: the results of your experiments, as well
 % as an explanation as to why the results are as they are
+%
 \subsubsection{Sequential Prefetcher}
-During the early stages of development a naive implementation of a prefetcher were tested.
-The results can be seen in Figure (Add sequential prefetcher figure [?]).
+During the early stages of development a naive implementation of a prefetcher was tested.
+The resulting speedup for different prefetching degrees can be seen in Figure \ref{fig:sequential}.
 From the Figure one can determine that a sequential prefetcher with a degree of 3 yielded best results.
-The tests [?], [?] and [?] recieved a great increase in performance.
 
-\subsubsection{Simple Direct Prefetcher}
-%todo
+This prefetcher yields great speedup for the applu benchmark, but has a significant negative impact on the ammp benchmark.
 
+\begin{figure*}
+    \label{fig:sequential}
+    \input{plots/sequential.tex}
+    \caption{Speedup of each benchmark as a function of degree for the sequential prefetcher.}
+\end{figure*}
+
+
+
+\subsubsection{Stride Direct Prefetcher}
+(todo)
 
 \subsubsection{Reference Table Prefetcher}
-%todo
+(todo)
 
 
 \subsubsection{Global History Buffer with Delta Correlation}
-%todo
+The implementation of the global history buffer with SDP and RTP as fallback was successfully implemented and yielded the speedups shown in Figure \ref{fig:ghbdc}.
+The best speedup was acquired for the ammp benchmark, but many of the other benchmark showed only a slight speedup if any at all.
+
+
+
+\begin{figure*}
+    \label{fig:ghbdc}
+    \input{plots/ghbdc.tex}
+    \caption{Speedup of each benchmark as a function of degree for the global history buffer with delta correlation and fall back to SDP and RTP.}
+\end{figure*}

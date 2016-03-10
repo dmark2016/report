@@ -1,6 +1,6 @@
 \section{Methodology}
 \label{sec:methodology}
-\subsection{Description}
+% \subsection{Description}
 % The methodology section explains your experimental setup.
 % It should state every bit of information that is necessary in
 % order to be able to reproduce your results. It further covers
@@ -12,16 +12,16 @@
 % state enough information such that your experiments are fully
 % reproducible.
 
-\todo{What goal? Mention accuracy and coverage?}
 In order to determine whether the goal had been reached, a method of evaluating the developed prefetchers was required.
-During this project, the evaluation was done using the M5 computer architecture simulator running a SPEC CPU2000 benchmark compiled for an ALPHA architecture.
-The prefetchers were implemented in C and compiled into the simulator before running the benchmark.
+During this project, the evaluation was done using the M5 computer architecture simulator running a reduced SPEC CPU2000 benchmark suite compiled for an ALPHA architecture.
+The simulator was configured with a two level cache system; level 1 was a split cache with 32 kB for instructions and 64 kB for data, level 2 a combined cache of 1 MB.
+The prefetchers were implemented in C and compiled into the simulator before running the benchmarks.
 
 The benchmark used was assumed to be representative of a normal computer workload, and a speedup of 0.95 or less was assumed to be a significant degradation.
 Thus the average speedup was used as a performance measure, given that no single benchmark dropped below a speedup of 0.95, was used for prefetcher evaluation.
 
 Several classical prefetchers were implemented, tested and evaluated to provide a solid starting point.
-First, a simple direct prefetcher (SPD) was tested, followed by a reference table prefetcher (RTP) and finally a global history buffer (GHB) with delta correlation.
+The implemented prefetchers were a sequential prefetcher, SDP, RPT, and a GHB with delta correlation.
 
 Next, the GHB implementation was extended to also include RTP and ultimately SPD as fall backs whenever the delta correlation did not result in any prefetches being performed.
 
