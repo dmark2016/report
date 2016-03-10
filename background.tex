@@ -1,17 +1,18 @@
 \section{Background}
 \label{sec:background}
-\subsection{Description}
-The background section covers knowledge that is necessary
-for understanding the proposed solution, but you cannot expect
-the audience of the paper to be familiar with. This is commonly
-the case when you propose solutions that incorporate
-knowledge from different research areas. An example would
-be an implementation of a compression scheme between
-memory and processor in order to decrease memory bandwidth
-utilization. It is very likely that you would need to explain
-the compression scheme, since most computer architecture
-researchers would not be familiar with it.
+\subsection{Prefetchers}
+%The background section covers knowledge that is necessary
+%for understanding the proposed solution, but you cannot expect
+%the audience of the paper to be familiar with. This is commonly
+%the case when you propose solutions that incorporate
+%knowledge from different research areas. An example would
+%be an implementation of a compression scheme between
+%memory and processor in order to decrease memory bandwidth
+%utilization. It is very likely that you would need to explain
+%the compression scheme, since most computer architecture
+%researchers would not be familiar with it.
 
+% == This stuff can probably be assumed known ==
 %The speed of processors have been improving much faster than the
 %speed of memory and thus memory is not able to keep up with the
 %processors. Processors have to wait for too long if needed data
@@ -76,13 +77,27 @@ of deltas exists. If such a pair is found, the next delta (or
 several of the next deltas) is added to the current address,
 and the result is prefetched.
 
+\subsection{SPEC CPU2000}
+\todo{reference to https://www.spec.org/cpu2000/docs/readme1st.html}
+CPU2000 was designed to provide a way to measure performance across
+a wide range of hardware. The benchmarks are based on real user
+applications. They measure the performance of the processor, memory
+and the compiler. CPU2000 contains 25 different benchmarks and
+measures both integer and floating point performance.
+
+\subsection{M5 simulator}
+M5 is an open-source hardware simulation system. It supports multiple
+different CPU architectures, one of them being Alpha, which we used.
+It has an event-driven memory system which among other features supports
+flexible arrangements of the components so it is possible to model
+multilevel caches.
+
 \subsection{Cache}
 
 L1 32 kB instruction and 64 kB data.
 L2 1 MB shared cache.
 
 
-\todo{SPEC CPU2000 benchmark and justification for why it can be assumed to be representative.}
 \todo{M5 simulator.}
 \todo{Different performance measures (accuracy, coverage)}
 \todo{Aggressiveness}
