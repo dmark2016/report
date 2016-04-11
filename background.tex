@@ -77,6 +77,10 @@ of deltas exists. If such a pair is found, the next delta (or
 several of the next deltas) is added to the current address,
 and the result is prefetched.
 
+\todo{Split into two sections: "Global History Buffer" and "Delta Correlation"}
+% Splitting is important because both SDP and RPT can be implemeted using GHB
+% (although it makes the implementation unnecessary complex).
+
 \subsection{Performance measures}
 Several different characteristics are used to measure the performance
 of the prefetchers. The most important one is the speedup of a
