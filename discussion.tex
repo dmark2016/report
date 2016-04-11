@@ -5,9 +5,10 @@
 % you have tried, but were not successful. It discusses weaknesses
 % of your scheme and highlights the strong and weak
 % points of your experimental setup.
-First of all, it may be surprising that a prefetcher as simple as the sequential prefetcher showed such good results for some of the tests.
+
+Our initial experimentation with sequential prefetching of various degrees yielded surprisingly good results for some benchmarks.
 A possible explanation for this is that the benchmark's behavior matched exceptionally well with the assumptions used when creating the prefetcher.
 Thus  applu benchmark probably accesses memory in a sequential manner.
 
-More interesting to note, is that the GHB implementation does an exceptionally good job at the ammp benchmark.
+More interesting to note, is that the GHB implementation does an exceptionally good job at the \texttt{ammp} benchmark.
 This was the benchmark with the highest negative performance impact from the naive sequential prefetcher, but the memory pattern seems to be very well suited for delta correlation.

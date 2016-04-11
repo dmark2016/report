@@ -15,19 +15,24 @@
 % as an explanation as to why the results are as they are
 %
 \subsubsection{Sequential Prefetcher}
-During the early stages of development a naive implementation of a prefetcher was tested.
-The resulting speedup for different prefetching degrees can be seen in Figure \ref{fig:sequential}.
-From the Figure one can determine that a sequential prefetcher with a degree of 3 yielded best results.
-
-This prefetcher yields great speedup for the applu benchmark, but has a significant negative impact on the ammp benchmark.
+During the early stages of development a naive, sequential implementation of a prefetcher was tested.
+The resulting average speedup for different prefetching degrees $p$ can be seen in Figure \ref{fig:seqavg}.
+No degree of sequential prefetching achieves an average speedup $> 1.0$.
+Figure \ref{fig:seq3} shows the individual benchmark results for a sequential prefetcher with $p = 3$.
+The same behaviour of increased and decreased speedup values averaging to $\sim 1.0$ was observed for all sequential prefetchers with $\{p \in \mathbf{Z} | 1 \leq p \leq 7\}$
+Sequential prefetching effects the \texttt{applu} and \texttt{wupwise} benchmarks positively, while having significant negative impact on the \texttt{ammp} benchmark.
 
 \begin{figure*}
-    \label{fig:sequential}
-    \input{plots/sequential.tex}
-    \caption{Speedup of each benchmark as a function of degree for the sequential prefetcher.}
+    \input{plots/seqavg.tex}
+    \caption{Average speedup as a function of degree for the sequential prefetcher.}
+    \label{fig:seqavg}
 \end{figure*}
 
-
+\begin{figure*}
+\label{fig:seq3}
+\input{plots/seq3.tex}
+\caption{Performance of sequential prefetcher with $p = 3$ across benchmarks.}
+\end{figure*}
 
 \subsubsection{Stride Direct Prefetcher}
 A simple implementation of a stride direct prefetcher yielded a better average speedup than the sequential prefetcher.
