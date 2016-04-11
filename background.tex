@@ -69,17 +69,19 @@ prefetched.
 \subsubsection{Global History Buffer}
 
 With a global history buffer (GHB), all the accesses by the same
-instructions are stored in a linked list. When the same
-instruction is encountered again, this list is traversed and the
-deltas between the addresses accessed are stored. Then the delta
+instructions are stored in a linked list. Each entry points to
+the previous entry which came from the same instruction. This
+history can be used by a variety of different algorithms to
+determine what to prefetch.
+
+\subsubsection{Delta Correlation}
+
+Using delta correlation, the access history is traversed and the
+deltas between the addresses accessed are stored. Then teh delta
 history is searched to see if a pair equal to the most recent pair
-of deltas exists. If such a pair is found, the next delta (or
+of deltas exists. If such a pair is found, the nex delta (or
 several of the next deltas) is added to the current address,
 and the result is prefetched.
-
-\todo{Split into two sections: "Global History Buffer" and "Delta Correlation"}
-% Splitting is important because both SDP and RPT can be implemeted using GHB
-% (although it makes the implementation unnecessary complex).
 
 \subsection{Performance measures}
 Several different characteristics are used to measure the performance
