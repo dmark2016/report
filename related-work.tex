@@ -1,8 +1,34 @@
 \section{Related Work}
 \label{sec:related-work}
-\subsection{Description}
-The related work section puts your paper into a research
-context. It mentions other research with similar goals or
-schemes and compares them to your work, highlighting the
-commonalities and differences. It also shows whether you have
-an overview of the research area.
+%The related work section puts your paper into a research
+%context. It mentions other research with similar goals or
+%schemes and compares them to your work, highlighting the
+%commonalities and differences. It also shows whether you have
+%an overview of the research area.
+
+There is a significant difference between CPU and memory speed.
+And in the recent years the technology has hit a memory wall.
+Prefetching is one technique to increase performance, despite the memory wall.
+A prefetcher fetches instructions into cache before they are needed,
+in order to avoid the latency introduced by main memory.
+
+Several prefetcher techniques have been researched, in order to increase memory performance.
+Well known algorithms are: sequential, stride direct \ref{bib:stride}, reference table \ref{bib:jahre} and global history buffer \ref{bib:ghb}.
+
+A sequential prefetcher uses the principle of spatial locality.
+If one memory block is accessed, the next memory block is most likely to be used.
+However not all memory acceses are sequential,
+and an improvment to sequental prefetcher is a stride direct prefetcher.
+If a program traverses a multiple dimensional array,
+each dimension may be placed in different places in memory,
+but with a constant stride.
+By storing the memory difference the next memory stride can be prefeched.
+A futher improvement is reference table prefetcher,
+which also contains a state.
+Each time a stride is used the state is recalculated to recieve better predicions.
+Lastly the global history buffer prefetcher utilizes a FIFO queue and an index table.
+The index table contains the PC value and a pointer to the FIFO queue,
+and the FIFO queue contains the global miss address.
+
+To achieve best results GHB is used together with delta correlation or stride prefeching.
+This hybrid algorithm is described in greather depth in \textit{Data Cacheprefetching Using a Global History Buffer} \ref{bib:ghb}.
