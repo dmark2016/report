@@ -9,7 +9,8 @@ Depending on the type of program, different memory access patterns arise, making
 
 In this paper, we present a prefetcher design that measurably increases performance for a wide range of program types.
 
-Our final prefetcher is an implementation of global history buffer with delta correlation. The memory accesses made by the instructions are stored in a linked list.
+Our final prefetcher is an implementation of global history buffer with delta correlation.
+The memory accesses made by the instructions are stored in a linked list.
 When an instruction is encountered again, the linked list is traversed and the deltas between the earlier accesses are examined to see wether a pair of deltas equal to the most recent ones exist.
 If it does, a block is prefetched using the same delta.
 

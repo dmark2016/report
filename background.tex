@@ -22,7 +22,7 @@
 %memory, it has to be small to not be too expensive. Therefore it
 %is limited what can be stored in the cache
 
-With a simple cache, data is not fetched in to the cache before the
+With a simple cache, data is not fetched to the cache before the
 processor needs the data or data in the same block. These misses
 are not possible to avoid without fetching blocks before the
 processor needs them (prefetching). There are many strategies
@@ -30,7 +30,7 @@ available for deciding what to prefetch.
 
 \subsubsection{Sequential prefetching}
 
-The simplest for of prefetching is to just prefetch the next block
+The simplest form of prefetching is to just prefetch the next block
 as well when fetching a block the processor needs. This can
 sometimes be improved on by changing the prefetch distance (instead
 of prefetching the next block, prefetch the second or a later one).
@@ -57,9 +57,9 @@ being accessed and the block containing the current address is prefetched.
 
 The reference prediction (RPT) method is similar to SDP, but in
 addition stores the stride and a state. The first time an
-instruction is encountered, the address is stored as in SDP, and
-in addition an initial state is set. The second time an instruction
-is encountered, the stride is calculated is in SDP and it is stored.
+instruction is encountered, an entry for that address is added to a table
+and the entry is set to the initial state. The second time an
+instruction is encountered, the stride is calculated and stored as in SDP.
 The state changes to training. The next time the instruction is
 encountered, the stride is calculated again, and compared to the
 currently stored stride. If they are equal, the state changes to
@@ -77,9 +77,9 @@ determine what to prefetch.
 \subsubsection{Delta Correlation}
 
 Using delta correlation, the access history is traversed and the
-deltas between the addresses accessed are stored. Then teh delta
+deltas between the addresses accessed are stored. Then the delta
 history is searched to see if a pair equal to the most recent pair
-of deltas exists. If such a pair is found, the nex delta (or
+of deltas exists. If such a pair is found, the next delta (or
 several of the next deltas) is added to the current address,
 and the result is prefetched.
 
