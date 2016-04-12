@@ -12,20 +12,16 @@
 % state enough information such that your experiments are fully
 % reproducible.
 
+The goal we set for our prefetcher was to achieve as high average speedup as we could, while having no individual benchmark with a speedup of less than $0.95$.
+A prefetcher with a negative impact greater than that on one or more types of programs, would be infeasible to use in a real world scenario.
 In order to determine whether the goal had been reached, a method of evaluating the developed prefetchers was required.
 During this project, the evaluation was done using the M5 computer architecture simulator running a reduced SPEC CPU2000 benchmark suite compiled for an ALPHA architecture.
 The simulator was configured with a two level cache system; level 1 was a split cache with 32 kB for instructions and 64 kB for data, level 2 a combined cache of 1 MB.
 The prefetchers were implemented in C and compiled into the simulator before running the benchmarks.
 
-\todo{How are the tools used? What are we looking for? How did we test the
-prefetchers?}
-
-After running the benchmarks, the simulator output the speedup, accuracy, coverage the prefetcher had for every benchmark, as well as the number of prefetches identified,
+After running the benchmarks, the simulator output the speedup, accuracy and coverage the prefetcher had for every benchmark, as well as the number of prefetches identified,
 number of prefetches issued and the total number of L2 cache misses for each benchmark. In addition the average speedup (calculated by harmonic mean) of all the benchmarks
 was output. We used the average speedup and to some extent the speedup for each benchmark to judge and compare the prefetchers.
-
-The benchmark used was assumed to be representative of a normal computer workload, and a speedup of 0.95 or less was assumed to be a significant degradation.
-Thus the average speedup was used as a performance measure, given that no single benchmark dropped below a speedup of 0.95.
 
 Several classical prefetchers were implemented, tested and evaluated to provide a solid starting point.
 The implemented prefetchers were a sequential prefetcher, SDP, RPT, and a GHB with delta correlation.

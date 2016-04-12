@@ -13,10 +13,10 @@
 The final prefetcher implemented during this project keeps a history of the
 previous memory requests issued and uses three different algorithms in a
 prioritized order to determine which addresses to prefetch.
+Figure~\ref{fig:prefetcher} illustrates this design.
 An overview of this can be found in Figure \ref{fig:prefetcher}.
 
 \begin{figure*}[h]
-	\label{fig:prefetcher}
 	\includegraphics{images/prefetcher.pdf}
 	\caption{
 		Basic structure and data flow in prefetcher. The lower bits of the
@@ -25,6 +25,7 @@ An overview of this can be found in Figure \ref{fig:prefetcher}.
 		is used to determine which addresses to prefetch using one of the
 		algorithms on the right.
 	}
+	\label{fig:prefetcher}
 \end{figure*}
 
 The history tracking is implemented using a global history buffer and an index.
@@ -56,7 +57,7 @@ This strategy fails to produce prefetches when
 \end{enumerate}
 
 Should the delta correlation fail to produce prefetches, the delta history is
-handed on to an algorithm inspired by reference table prediction.
+handed on to an algorithm inspired by the reference prediction table.
 The prefetches are issued using the most recent delta in the history if the two
 last entries are equal.
 In this case, the same delta is simply added to the memory address requested
