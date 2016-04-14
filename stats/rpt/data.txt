@@ -1,0 +1,12 @@
+1	0.99	bzip2-source
+2	1.00	twolf
+3	1.00	swim
+4	1.02	apsi
+5	1.02	galgel
+6	1.02	bzip2-graphic
+7	1.04	art110
+8	1.04	art470
+9	1.04	bzip2-program
+10	1.11	applu
+11	1.21	wupwise
+12	1.36	ammp

@@ -14,6 +14,7 @@
 % consists of two parts: the results of your experiments, as well
 % as an explanation as to why the results are as they are
 %
+
 \subsubsection{Sequential Prefetcher}
 During the early stages of development a naive, sequential implementation of a prefetcher was tested.
 The resulting average speedup for different prefetching degrees $p$ can be seen in Figure \ref{fig:seqavg}.
@@ -38,13 +39,20 @@ Sequential prefetching effects the \texttt{applu} and \texttt{wupwise} benchmark
 A simple implementation of a stride direct prefetcher yielded a better average speedup ($1.07$) than the sequential prefetcher.
 The benchmarks wupwise and ammp had high speedups, which pulled up the average.
 This prefetcher had a negative impact on the twolf benchmark.
+
 \todo{Figure showing something with sdp?}
 
 \subsubsection{Reference Prediction Table}
-The RPT implementation performed yielded an average speedup of $1.06$.
+The RPT implementation yielded an average speedup of $1.06$.
 While slightly lower than the SDP average, the maximum and minimum values are closer together.
 Testing of the RPT implementation saw no benchmark with a speedup of less than $0.95$.
+Figure~\ref{fig:rpt} shows how RPT performs on each benchmark.
 
+\begin{figure*}
+  \input{plots/rpt.tex}
+  \caption{Performance of RPT prefetcher across benchmarks.}
+  \label{fig:rpt}
+\end{figure*}
 
 \subsubsection{Global History Buffer with Delta Correlation}
 The implementation of the global history buffer with SDP and RTP as fallback was successfully implemented and yielded the speedups shown in Figure \ref{fig:ghbdc}.
@@ -55,4 +63,10 @@ The best speedup was acquired for the ammp benchmark, but many of the other benc
   \input{plots/ghbdc.tex}
   \caption{Speedup of each benchmark as a function of degree for the global history buffer with delta correlation and fall back to SDP and RTP.}
   \label{fig:ghbdc}
+\end{figure*}
+
+\begin{figure*}
+  \input{plots/ghbdcavg.tex}
+  \caption{Average speedup as a function of prefetching degree for our final prefetcher implementation.}
+  \label{fig:ghbdcavg}
 \end{figure*}
