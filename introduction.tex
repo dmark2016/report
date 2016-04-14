@@ -1,23 +1,44 @@
 \section{Introduction}
 \label{sec:introduction}
 
-In modern computer architecture, the memory hierarchy plays an important part.
-Without intelligent usage of caches and scheduling of requests to main memory, the processor will spend an undesirable amount of time idle while waiting for data.
-Prefetching aims to reduce cache misses and increase data availability by attempting to predict which data will be needed in the future and fetch it early. \todo{rephrase}
-Designing a prefetcher that performs well for all programs is difficult.
-Depending on the type of program, different memory access patterns arise, making it necessary for the prefetcher to be adaptive.
+In 1965 Gordon E. Moore observed that the number of transistors approximately double each 2 years \cite{bib:moore},
+and would continue to do so for many years.
+The increasing number of transistors again lead to faster circuits.
 
-In this paper, we present a prefetcher design that measurably increases performance for a wide range of program types.
+However, the memory technology did not increase the performance at the same rate as the processor.
+As a result there is a gap between processor and memmory performance, which is also known as the memory gap.
+This again lead to the processor being idle for a long time.
+To overcome the memory gap a new technique was developed called cache hiearchy.
 
-Our final prefetcher is an implementation of global history buffer with delta correlation.
-The memory accesses made by the instructions are stored in a linked list.
-When an instruction is encountered again, the linked list is traversed and the deltas between the earlier accesses are examined to see wether a pair of deltas equal to the most recent ones exist.
-If it does, a block is prefetched using the same delta.
+A cache is a small memory placed closer to the processor, compared to the main memory.
+Caches is significantly faster, but is small in terms of memory space.
+To achive both cache speed and space, caches are constructed as a hierarchy.
+With small and fast cache close to the processor and larger but larger, futher away.
 
-This paper provides background (section~\ref{sec:background}) on various prefetcher strategies as well as an overview of our process and methodology (section~\ref{sec:methodology}).
-Subsequently, the finished prefetcher design is presented (section~\ref{sec:prefetcher}).
-Finally, we present and discuss our findings (section~\ref{sec:results-and-discussion}), provide an overview of some related works (section~\ref{sec:related-work}) and a conclusion (section~\ref{sec:conclusion}).
-\todo{better way of writing this?}
+Even though cache greatly reduces memory latency, cache misses will often occur as the required data has to be fetched from main memory.
+To minmize cache misses, and memory latency, a technique called prefeching may be utilized.
+Prefetching is a technique where memory accesses is predicted in advance.
+
+This paper presents an overview of a few different prefetching techniques.
+\todo{Write a few sentences about this paper}
+
+This paper provides background (Section~\ref{sec:background}) on various prefetcher strategies as well as an overview of our process and methodology (Section~\ref{sec:methodology}).
+Subsequently, the finished prefetcher design is presented (Section~\ref{sec:prefetcher}), followed by results and perfomance details (Section~\ref{sec:results}).
+Finally, we discuss (Section~\ref{sec:discussion}) our findings,
+provide an overview of some related works (Section~\ref{sec:related-work}) and a conclusion (Section~\ref{sec:conclusion}).
+
+%In modern computer architecture, the memory hierarchy plays an important part.
+%Without intelligent usage of caches and scheduling of requests to main memory, the processor will spend an undesirable amount of time idle while waiting for data.
+%Prefetching aims to reduce cache misses and increase data availability by attempting to predict which data will be needed in the future and fetch it early. \todo{rephrase}
+%Designing a prefetcher that performs well for all programs is difficult.
+%Depending on the type of program, different memory access patterns arise, making it necessary for the prefetcher to be adaptive.
+
+%In this paper, we present a prefetcher design that measurably increases performance for a wide range of program types.
+
+%Our final prefetcher is an implementation of global history buffer with delta correlation.
+%The memory accesses made by the instructions are stored in a linked list.
+%When an instruction is encountered again, the linked list is traversed and the deltas between the earlier accesses are examined to see wether a pair of deltas equal to the most recent ones exist.
+%f it does, a block is prefetched using the same delta.
 
 %The introduction section introduces the larger research area
 %the paper is a part of and illustrates the concrete problem(s) at
