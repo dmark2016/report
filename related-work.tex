@@ -12,9 +12,16 @@ and an significant amount of research have gone into memory prefetchers.
 
 \textit{Evaluation of Hardware-Based Stride and Sequential Prefetching in Shared-Memory Multiprocessors} \ref{bib:stride}
 is a paper on stride and sequential prefetching.
-In this paper their finding was that sequential prefetching in some cases performed better than stride prefetching.
+The authors findings were that sequential prefetching in some cases performed better than stride prefetching.
 They argued that a significant amount of the strides were shorter than the block size.
+However, \todo{Add our findings}
 
+In the Doctoral thesis \textit{Managing Shared Resources in Chip Multiprocessor Memory Systems} \ref{bib:jahre}
+Jahre describes the RPT prefetching algorithm and that RPT is limited to constant strides.
+In our experince RPT yielded best result when the alorithm either trained or fetched the missing block on each memory access.
+
+The paper \textit{Data Cacheprefetching Using a Global History Buffer} \ref{bib:ghb}
+describes how GHB is more space efficient in terms of the prefetcher history table sizes.
 
 %There is a significant difference between CPU and memory speed.
 %In recent years, it has become increasingly important to speed up memory access to ensure that the CPU is not spending much of its time idle, waiting for data.
