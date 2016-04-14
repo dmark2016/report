@@ -1,5 +1,5 @@
-\section{Results}
-\label{sec:results}
+\section{Results and Discussion}
+\label{sec:results-and-discussion}
 % \subsection{Description}
 % This section presents the results of your experiments,
 % comparing your solution to other schemes. The metrics of
@@ -70,3 +70,20 @@ The best speedup was acquired for the ammp benchmark, but many of the other benc
   \caption{Average speedup as a function of prefetching degree for our final prefetcher implementation.}
   \label{fig:ghbdcavg}
 \end{figure*}
+
+%\subsection{Description}
+% This section might elaborate on alternative approaches that
+% you have tried, but were not successful. It discusses weaknesses
+% of your scheme and highlights the strong and weak
+% points of your experimental setup.
+
+Experimenting with sequential prefetching of various degrees yielded surprisingly good results for some benchmarks.
+A possible explanation for this is that the benchmark's behavior matched exceptionally well with the assumptions used when creating the prefetcher.
+Based on this, it is reasonable to assume that the \texttt{applu} and \texttt{wupwise} benchmarks access memory fairly sequentially.
+
+\todo{SDP}
+\todo{RPT}
+
+Our hybrid implementation 
+More interesting to note, is that the delta-correlation implementation does an exceptionally good job at the \texttt{ammp} benchmark.
+This was the benchmark with the highest negative performance impact from the naive sequential prefetcher, but the memory pattern seems to be very well suited for delta correlation.
