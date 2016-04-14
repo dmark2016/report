@@ -1,32 +1,36 @@
 \section{Introduction}
 \label{sec:introduction}
 
-In 1965 Gordon E. Moore observed that the number of transistors approximately double each 2 years \cite{bib:moore},
-and would continue to do so for many years.
-The increasing number of transistors again lead to faster circuits.
+In 1965 Gordon E. Moore observed that the transistor density on integrated circuits approximately doubles every 2 years ,
+and predicted that it would continue to do so for many years~\cite{bib:moore}.
+Up until recently, this prediction has held true.
+Processor performance has increased alongside transistor density.
 
-However, the memory technology has not improved at the same rate as the processor.
-As a result there is a gap between processor and memory performance.
-This is known as the memory gap.
-This again lead to the processor being idle for a long time.
-To overcome the memory gap a new technique was developed called cache hiearchy.
+However, memory technology has not improved at the same rate as the processor.
+As a result there is a gap between processor and memory performance, known as the memory gap.
+Increasing processor performance means little if the processor spends a lot of time idle, waiting for data from memory.
+Modern computer architectures often include different mechanisms for reducing this time.
+One such mechanism is the cache hierarchy.
 
-A cache is a small memory placed closer to the processor, compared to the main memory.
-Caches is significantly faster, but is small in terms of memory space.
-To achive both cache speed and space, caches are constructed as a hierarchy.
-With small and fast cache close to the processor and larger but larger, futher away.
+The idea behind the cache hierarchy is to have frequently accessed data in small, fast memory close to the processor.
+By reducing the total amount of requests that have to go through to main memory, the processor spends less time idling.
+Modern architectures often have 3-4 levels of cache between processor cores and main memory.
+L1 and L2 are often local to each core, while L3 and L4 are shared.
 
-Even though cache greatly reduces memory latency, cache misses will often occur as the required data has to be fetched from main memory.
-To minmize cache misses, and memory latency, a technique called prefeching may be utilized.
-Prefetching is a technique where memory accesses is predicted in advance.
+While cache hierarchies reduce the effect of the memory gap, performance can still be improved.
+When a program requests data that is not in cache, we say that a cache miss has occurred.
+Every time a miss happens, the latency penalty of accessing main memory is incurred.
+To minimize the number of cache misses, and thereby increasing performance, a technique called prefeching is utilized.
+By predicting what data will be required next by the processor, we can avoid a cache miss by fetching data early.
 
-This paper presents an overview of a few different prefetching techniques.
-\todo{Write a few sentences about this paper}
+In this paper we evaluate various prefetching techniques based on their performance across a wide range of programs.
+We also present a prefetcher that combines ideas from several other schemes.
+// TODO: Write one sentence about result, what the hell have we actually achieved.
 
-This paper provides background (Section~\ref{sec:background}) on various prefetcher strategies as well as an overview of our process and methodology (Section~\ref{sec:methodology}).
-Subsequently, the finished prefetcher design is presented (Section~\ref{sec:prefetcher}), followed by results and perfomance details (Section~\ref{sec:results}).
-Finally, we discuss (Section~\ref{sec:discussion}) our findings,
-provide an overview of some related works (Section~\ref{sec:related-work}) and a conclusion (Section~\ref{sec:conclusion}).
+Section~\ref{sec:background} provides a background on various prefetcher strategies.
+In Section~\ref{sec:prefetcher} our final prefetcher design is presented.
+Subsequently, our methodology and process is reviewed in Section~\ref{sec:methodology}.
+Finally, we present and discuss our findings (Section~\ref{sec:results-and-discussion}), provide an overview of some related works (Section~\ref{sec:related-work}) and a conclusion (Section~\ref{sec:conclusion}).
 
 %In modern computer architecture, the memory hierarchy plays an important part.
 %Without intelligent usage of caches and scheduling of requests to main memory, the processor will spend an undesirable amount of time idle while waiting for data.
