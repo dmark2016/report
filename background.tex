@@ -81,25 +81,3 @@ history is searched to see if a pair equal to the most recent pair
 of deltas exists. If such a pair is found, the next delta, or
 several of the next deltas, are added to the current address,
 and the result is prefetched.
-
-\subsection{Performance measures}
-Several different characteristics are used to measure the performance
-of the prefetchers. The most important one is the speedup of a
-prefetcher compared to running without a prefetcher:
-
-$speedup = \frac{execution time_{without prefetcher}}{execution time_{with prefetcher}}$.
-
-In additon, accuracy and coverage are useful measures. Accuracy measures
-how many of the prefetches were actually needed:
-
-$accuracy = \frac{good prefetches}{total prefetches}$.
-
-Even if the prefetches were needed it is not guaranteed that they
-were used. They may have been issued too late.
-
-Coverage measures how many of the misses were removed by the
-prefetcher:
-
-$coverage = \frac{good prefetches}{cache misses without prefetching}$.
-
-\cite{bib:doc}
