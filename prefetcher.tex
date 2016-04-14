@@ -13,7 +13,6 @@
 The final prefetcher implemented during this project keeps a history of the
 previous memory requests issued and uses three different algorithms in a
 prioritized order to determine which addresses to prefetch.
-Figure~\ref{fig:prefetcher} illustrates this design.
 An overview of this can be found in Figure \ref{fig:prefetcher}.
 
 \begin{figure*}[h]
@@ -30,7 +29,7 @@ An overview of this can be found in Figure \ref{fig:prefetcher}.
 \end{figure*}
 
 The history tracking is implemented using a global history buffer and an index.
-Given a instruction address, the lower bits can be used to look up an entry in
+Given an instruction address, the lower bits can be used to look up an entry in
 the global history buffer through the index.
 This entry is the first in a doubly linked list of memory addresses accessed by
 instructions with matching lower bits in their addresses.

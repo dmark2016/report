@@ -18,7 +18,7 @@
 \subsubsection{Sequential Prefetcher}
 During the early stages of development a naive, sequential implementation of a prefetcher was tested.
 The resulting average speedup for different prefetching degrees $p$ can be seen in Figure \ref{fig:seqavg}.
-No degree of sequential prefetching achieves an average speedup $> 1.0$.
+No degree of sequential prefetching achieves an average speedup greater than $1.0$.
 Figure \ref{fig:seq3} shows the individual benchmark results for a sequential prefetcher with $p = 3$.
 The same behaviour of increased and decreased speedup values averaging to $\sim 1.0$ was observed for all sequential prefetchers with $\{p \in \mathbf{Z} | 1 \leq p \leq 7\}$
 Sequential prefetching effects the \texttt{applu} and \texttt{wupwise} benchmarks positively, while having significant negative impact on the \texttt{ammp} benchmark.
@@ -84,6 +84,6 @@ Based on this, it is reasonable to assume that the \texttt{applu} and \texttt{wu
 \todo{SDP}
 \todo{RPT}
 
-Our hybrid implementation 
+Our hybrid implementation
 More interesting to note, is that the delta-correlation implementation does an exceptionally good job at the \texttt{ammp} benchmark.
 This was the benchmark with the highest negative performance impact from the naive sequential prefetcher, but the memory pattern seems to be very well suited for delta correlation.
