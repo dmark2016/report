@@ -22,42 +22,42 @@
 %memory, it has to be small to not be too expensive. Therefore it
 %is limited what can be stored in the cache
 
-A simple cache only fetches data into the cache when the data is needed by the processor.
-Cache misses are not possible to avoid without fetching blocks before the processor needs them, that is, prefetching.
-There are several prefetch strategies available.
+In a cache hierarchy with no prefetcher, data is fetched from main memory every time a cache miss occurs.
+By prefetching data, ensuring that it is present in cache at the right time, we can reduce the amount of misses and therefore improve performance.
+There are several prefetching strategies available.
 
 \subsubsection{Sequential prefetching}
 
 The simplest form of prefetching is to just prefetch the next block
 as well when fetching a block the processor needs. This can
 sometimes be improved by changing the prefetch distance. With a
-different prefetch distance, the second or a later block will be
+different prefetch distance, the second or a later block is
 prefetched instead of the next block.
-Sometimes the processor will need the next block before it is in
+Sometimes the processor needs the next block before it is in
 the cache even if it was prefetched. In these cases prefetching a
 later block can improve performance.
 
-In addition, more than one block can be prefetched, that is, increasing the
-prefetch degree. If the running program uses a lot of sequential
-memory this can improve performance. If too many blocks are
-prefetched, blocks that are still in use can be evicted from the
-cache, which can degrade performance.
+In addition, more than one block can be prefetched at a time.
+We refer to this as increasing the prefetching degree. If the
+running program traverses memory in a linear fashion, this can
+improve performance. If too many blocks are prefetched, blocks that
+are still in use can be evicted from the cache, which can degrade performance.
 
 \subsubsection{Stride Directed Prefetching}
 
-With stride directed prefetching (SDP), the memory address and instruction
-accesses is stored together with the program counter address of the instruction
-and a valid bit is set. When an instruction is encountered again, the stride
-between the address accessed the last time, and the address accessed the
-current time is calculated. Then the stride is added to the address currently
+With stride directed prefetching (SDP), the memory address requested by an instruction
+is stored together with the program counter address of the instruction
+and a valid bit is set. When the instruction is encountered again, the stride
+between the address accessed the last time, and the address currently being accessed
+is calculated. Then the stride is added to the address currently
 being accessed and the block containing the current address is prefetched.
 
 \subsubsection{Reference Prediction Tables}
 
-The reference prediction table (RPT) method is similar to SDP, but in
+The reference prediction table (RPT) technique is similar to SDP, but in
 addition stores the stride and a state. The first time an
 instruction is encountered, an entry for that address is added to a table
-and the entry is set to the initial state. The second time an
+and the entry is set to the initial state. The second time the
 instruction is encountered, the stride is calculated and stored as in SDP.
 The state changes to training. The next time the instruction is
 encountered, the stride is calculated again, and compared to the
