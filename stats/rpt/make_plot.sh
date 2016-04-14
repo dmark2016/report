@@ -2,7 +2,7 @@
 
 rm -f data.txt;
 
-cat stats.txt | \
+cat stats_deg1.txt | \
   sed -n 186,197p | \
   sed -E 's/^[[:blank:]]*(([[:alnum:]]|\_)*)[[:blank:]]+[[:digit:]]\.[[:digit:]]+[[:blank:]]+([[:digit:]]\.[[:digit:]]+)[[:blank:]].*/\3 \1/' | \
   sed -E 's/_/\-/g' | \
