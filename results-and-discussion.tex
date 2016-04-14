@@ -13,7 +13,44 @@
 % better/worse compared to the other schemes. Thus, this section
 % consists of two parts: the results of your experiments, as well
 % as an explanation as to why the results are as they are
-%
+
+
+An interesting example of how the different prefetchers differ, is the \texttt{ammp} benchmark.
+This is the benchmark where the sequential prefetcher performs worst;
+it degrades performance significantly and a higher prefetching degree only makes
+it worse.
+For degree 1, it identifies just above $3.5m$ possible prefetches, but an
+extremely low accuracy of only $0.1\%$ means most of the effort put into
+prefetching blocks is wasted.
+
+The SDP prefetcher on the other hand performs quite well and gives a speedup of
+$1.7$ for a prefetching degree of $3$.
+For this degree, the number of identified prefetches is around $8.4m$, but an
+accuracy of $86\%$ means only $1.2m$ of these are wasted effort.
+As the only difference between this and the sequential prefetcher is the
+variable stride used for SDP, this indicates that the \texttt{ammp} benchmark
+accesses memory in a regular, but striding fashion.
+\todo{Is this consistent with the benchmark description?}
+
+The remaining prefetchers all handle strided access and results comparable with
+SDP should therefore be expected.
+For GHB/DC, the best results are achieved with a prefetching degree of $7$.
+At this degree, this results in $14m$ prefetches being identified, where $84\%$
+or around $12m$ turns out to be useful.
+The $2.3m$ fetches for useless data is probably what makes GHB/DC less effective
+than SDP.
+%TODO: Comment how many of these were already in MSHRs?
+This is also suggested by the $44\%$ increase in average cache miss latency.
+
+For the prefetcher developed during this project, GHB/H, the speedup is slightly
+worse than for the pure GHB/DC approach.
+Despite falling back to RPT and eventually SDP, the GHB/H approach identifies
+fewer prefetches than the GHB/DC prefetcher.
+%TODO: Y?!
+
+
+
+
 
 \subsubsection{Sequential Prefetcher}
 During the early stages of development a naive, sequential implementation of a prefetcher was tested.
