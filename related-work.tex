@@ -6,27 +6,44 @@
 %commonalities and differences. It also shows whether you have
 %an overview of the research area.
 
-There is a significant difference between CPU and memory speed.
-In recent years, it has become increasingly important to speed up memory access to ensure that the CPU is not spending much of its time idle, waiting for data.
-Prefetching is one technique used to reduce memory access time.
+Reducing the memory access time is an important issue in computer design.
+Memory prefetching is a technique to reduce memory access times,
+and an significant amount of research have gone into memory prefetchers.
 
-Several prefetcher techniques have been researched, in order to increase memory performance.
-Well known algorithms are: sequential, stride directed \ref{bib:stride}, reference prediction table \ref{bib:jahre} and delta correlation \ref{bib:ghb}.
+\textit{Evaluation of Hardware-Based Stride and Sequential Prefetching in Shared-Memory Multiprocessors} \ref{bib:stride}
+is a paper on stride and sequential prefetching.
+The authors findings were that sequential prefetching in some cases performed better than stride prefetching.
+They argued that a significant amount of the strides were shorter than the block size.
+However, \todo{Add our findings}
 
-A sequential prefetcher uses the principle of spatial locality.
-If one memory block is accessed, the next memory block is most likely to be used.
-However not all memory acceses are sequential,
-and an improvment to sequental prefetcher is a stride direct prefetcher.
-If a program traverses a multiple dimensional array,
-each dimension may be placed in different places in memory,
-but with a constant stride.
-By storing the memory difference the next memory stride can be prefeched.
-A futher improvement is reference table prefetcher,
-which also contains a state.
-Each time a stride is used the state is recalculated to recieve better predicions.
-Lastly the global history buffer prefetcher utilizes a FIFO queue and an index table.
-The index table contains the PC value and a pointer to the FIFO queue,
-and the FIFO queue contains the global miss address.
+In the Doctoral thesis \textit{Managing Shared Resources in Chip Multiprocessor Memory Systems} \ref{bib:jahre}
+Jahre describes the RPT prefetching algorithm and that RPT is limited to constant strides.
+In our experince RPT yielded best result when the alorithm either trained or fetched the missing block on each memory access.
 
-To achieve best results GHB is used together with delta correlation or stride prefeching.
-This hybrid algorithm is described in greather depth in \textit{Data Cacheprefetching Using a Global History Buffer} \ref{bib:ghb}.
+The paper \textit{Data Cacheprefetching Using a Global History Buffer} \ref{bib:ghb}
+describes how GHB is more space efficient in terms of the prefetcher history table sizes.
+
+%There is a significant difference between CPU and memory speed.
+%In recent years, it has become increasingly important to speed up memory access to ensure that the CPU is not spending much of its time idle, waiting for data.
+%Prefetching is one technique used to reduce memory access time.
+
+%Several prefetcher techniques have been researched, in order to increase memory performance.
+%Well known algorithms are: sequential, stride directed \ref{bib:stride}, reference prediction table \ref{bib:jahre} and delta correlation \ref{bib:ghb}.
+
+%A sequential prefetcher uses the principle of spatial locality.
+%If one memory block is accessed, the next memory block is most likely to be used.
+%However not all memory acceses are sequential,
+%and an improvment to sequental prefetcher is a stride direct prefetcher.
+%If a program traverses a multiple dimensional array,
+%each dimension may be placed in different places in memory,
+%but with a constant stride.
+%By storing the memory difference the next memory stride can be prefeched.
+%A futher improvement is reference table prefetcher,
+%which also contains a state.
+%Each time a stride is used the state is recalculated to recieve better predicions.
+%Lastly the global history buffer prefetcher utilizes a FIFO queue and an index table.
+%The index table contains the PC value and a pointer to the FIFO queue,
+%and the FIFO queue contains the global miss address.
+
+%To achieve best results GHB is used together with delta correlation or stride prefeching.
+%This hybrid algorithm is described in greather depth in \textit{Data Cacheprefetching Using a Global History Buffer} \ref{bib:ghb}.

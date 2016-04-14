@@ -22,11 +22,9 @@
 %memory, it has to be small to not be too expensive. Therefore it
 %is limited what can be stored in the cache
 
-With a simple cache, data is not fetched to the cache before the
-processor needs the data or data in the same block. These misses
-are not possible to avoid without fetching blocks before the
-processor needs them (prefetching). There are many strategies
-available for deciding what to prefetch.
+A simple cache only fetches data into the cache when the data is needed by the processor.
+Cache misses are not possible to avoid without fetching blocks before the processor needs them (prefetching).
+There are several prefetch strategies available.
 
 \subsubsection{Sequential prefetching}
 
@@ -46,16 +44,16 @@ cache, which can degrade performance.
 
 \subsubsection{Stride Directed Prefetching}
 
-With stride directed prefetching (SDP), the memory address an instruction
+With stride directed prefetching (SDP), the memory address and instruction
 accesses is stored together with the program counter address of the instruction
 and a valid bit is set. When an instruction is encountered again, the stride
 between the address accessed the last time, and the address accessed the
-current time is calculated. Then this stride is added to the address currently
+current time is calculated. Then the stride is added to the address currently
 being accessed and the block containing the current address is prefetched.
 
 \subsubsection{Reference Prediction Tables}
 
-The reference prediction (RPT) method is similar to SDP, but in
+The reference prediction table (RPT) method is similar to SDP, but in
 addition stores the stride and a state. The first time an
 instruction is encountered, an entry for that address is added to a table
 and the entry is set to the initial state. The second time an
