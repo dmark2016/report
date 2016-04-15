@@ -28,7 +28,6 @@ By comparing the results in greater detail, we try to understand why.
 \end{figure}
 
 
-
 An interesting example of how the different prefetchers differ, is the \texttt{ammp} benchmark.
 This is the benchmark where the sequential prefetcher performs worst;
 it degrades performance significantly and a higher prefetching degree only makes
@@ -56,84 +55,84 @@ less effective than SDP despite the improved coverage.
 %TODO: Comment how many of these were already in MSHRs?
 This is also suggested by the $44\%$ increase in average cache miss latency.
 
-For the hybrid prefetcher developed during this project, the speedup is slightly
+For the hybrid prefetcher developed during this project, the speedup on \texttt{ammp} is slightly
 worse than for the pure delta correlation approach.
 Despite falling back to RPT and eventually SDP, the hybrid approach identifies
 fewer prefetches than the delta correlating prefetcher.
 Combined with about the same accuracy as for delta correlation, this can explain
 the reduced performance.
-\todo{Why? It should have more}
+\todo{Why?}
+
+// TODO: Write more in depth analysis that explore why the hybrid prefetcher performs worse than DC.
 
 
-\subsubsection{Sequential Prefetcher}
-To get a sense of how the different benchmarks' performance respond to prefetching, we start by implementing a sequential prefetcher, with prefetching degree varying from 1 to 7.
-The best average speedup is $1.0$ for a degree of 1.
-We observe that different benchmarks respond differently to different degrees of prefetching.
-See Figure \ref{fig:sequential}
-\texttt{applu},
-
-
-\begin{figure}
-  \input{plots/sequential.tex}
-  \caption{Effect of prefetching degree in sequential prefetcher for benchmarks.}
-  \label{fig:sequential}
-\end{figure}
-
+%The best average speedup is $1.0$ for a degree of 1.
+%We observe that different benchmarks respond differently to different degrees of prefetching.
+%See Figure \ref{fig:sequential}
+%\texttt{applu},
+%
+%
+%\begin{figure}
+%  \input{plots/sequential.tex}
+%  \caption{Effect of prefetching degree in sequential prefetcher for benchmarks.}
+%  \label{fig:sequential}
+%\end{figure}
+%
+%%\begin{figure*}
+%%  \input{plots/seq3.tex}
+%%  \caption{Performance of sequential prefetcher with $p = 3$ across benchmarks.}
+%%  \label{fig:seq3}
+%%\end{figure*}
+%
+%\subsubsection{Stride Direct Prefetcher}
+%A simple implementation of a stride direct prefetcher yielded a better average speedup ($1.07$) than the sequential prefetcher.
+%The benchmarks wupwise and ammp had high speedups, which pulled up the average.
+%This prefetcher had a negative impact on the twolf benchmark.
+%
+%
+%\subsubsection{Reference Prediction Table}
+%// TODO: 
+%The RPT implementation yielded an average speedup of $1.06$.
+%While slightly lower than the SDP average, the maximum and minimum values are closer together.
+%Testing of the RPT implementation saw no benchmark with a speedup of less than $0.95$.
+%Figure~\ref{fig:rpt} shows how RPT performs on each benchmark.
+%
+%%\begin{figure*}
+%%  \input{plots/rpt.tex}
+%%  \caption{Performance of RPT prefetcher across benchmarks.}
+%%  \label{fig:rpt}
+%%\end{figure*}
+%
+%\subsubsection{Global History Buffer with Delta Correlation}
+%The implementation of the global history buffer with SDP and RTP as fallback was successfully implemented and yielded the speedups shown in Figure \ref{fig:ghbdc}.
+%The best speedup was acquired for the ammp benchmark, but many of the other benchmark showed only a slight speedup if any at all.
+%
+%
 %\begin{figure*}
-%  \input{plots/seq3.tex}
-%  \caption{Performance of sequential prefetcher with $p = 3$ across benchmarks.}
-%  \label{fig:seq3}
+%  \input{plots/ghbdc.tex}
+%  \caption{Speedup of each benchmark as a function of degree for the global history buffer with delta correlation and fall back to SDP and RTP.}
+%  \label{fig:ghbdc}
 %\end{figure*}
-
-\subsubsection{Stride Direct Prefetcher}
-A simple implementation of a stride direct prefetcher yielded a better average speedup ($1.07$) than the sequential prefetcher.
-The benchmarks wupwise and ammp had high speedups, which pulled up the average.
-This prefetcher had a negative impact on the twolf benchmark.
-
-
-\subsubsection{Reference Prediction Table}
-// TODO: 
-The RPT implementation yielded an average speedup of $1.06$.
-While slightly lower than the SDP average, the maximum and minimum values are closer together.
-Testing of the RPT implementation saw no benchmark with a speedup of less than $0.95$.
-Figure~\ref{fig:rpt} shows how RPT performs on each benchmark.
-
+%
 %\begin{figure*}
-%  \input{plots/rpt.tex}
-%  \caption{Performance of RPT prefetcher across benchmarks.}
-%  \label{fig:rpt}
+%  \input{plots/ghbdcavg.tex}
+%  \caption{Average speedup as a function of prefetching degree for our final prefetcher implementation.}
+%  \label{fig:ghbdcavg}
 %\end{figure*}
-
-\subsubsection{Global History Buffer with Delta Correlation}
-The implementation of the global history buffer with SDP and RTP as fallback was successfully implemented and yielded the speedups shown in Figure \ref{fig:ghbdc}.
-The best speedup was acquired for the ammp benchmark, but many of the other benchmark showed only a slight speedup if any at all.
-
-
-\begin{figure*}
-  \input{plots/ghbdc.tex}
-  \caption{Speedup of each benchmark as a function of degree for the global history buffer with delta correlation and fall back to SDP and RTP.}
-  \label{fig:ghbdc}
-\end{figure*}
-
-\begin{figure*}
-  \input{plots/ghbdcavg.tex}
-  \caption{Average speedup as a function of prefetching degree for our final prefetcher implementation.}
-  \label{fig:ghbdcavg}
-\end{figure*}
-
-%\subsection{Description}
-% This section might elaborate on alternative approaches that
-% you have tried, but were not successful. It discusses weaknesses
-% of your scheme and highlights the strong and weak
-% points of your experimental setup.
-
-Experimenting with sequential prefetching of various degrees yielded surprisingly good results for some benchmarks.
-A possible explanation for this is that the benchmark's behavior matched exceptionally well with the assumptions used when creating the prefetcher.
-Based on this, it is reasonable to assume that the \texttt{applu} and \texttt{wupwise} benchmarks access memory fairly sequentially.
-
-\todo{SDP}
-\todo{RPT}
-
-Our hybrid implementation
-More interesting to note, is that the delta-correlation implementation does an exceptionally good job at the \texttt{ammp} benchmark.
-This was the benchmark with the highest negative performance impact from the naive sequential prefetcher, but the memory pattern seems to be very well suited for delta correlation.
+%
+%%\subsection{Description}
+%% This section might elaborate on alternative approaches that
+%% you have tried, but were not successful. It discusses weaknesses
+%% of your scheme and highlights the strong and weak
+%% points of your experimental setup.
+%
+%Experimenting with sequential prefetching of various degrees yielded surprisingly good results for some benchmarks.
+%A possible explanation for this is that the benchmark's behavior matched exceptionally well with the assumptions used when creating the prefetcher.
+%Based on this, it is reasonable to assume that the \texttt{applu} and \texttt{wupwise} benchmarks access memory fairly sequentially.
+%
+%\todo{SDP}
+%\todo{RPT}
+%
+%Our hybrid implementation
+%More interesting to note, is that the delta-correlation implementation does an exceptionally good job at the \texttt{ammp} benchmark.
+%This was the benchmark with the highest negative performance impact from the naive sequential prefetcher, but the memory pattern seems to be very well suited for delta correlation.
