@@ -20,12 +20,12 @@ This is to be expected, as they are all variations around the same idea.
 We see that our hybrid prefetcher has lower average speedup than the simple DC implementation.
 By comparing the results in greater detail, we try to understand why.
 
-\begin{figure}
-  \center
-  \input{plots/comparison.tex}
-  \caption{Average speedup for the evaluated prefetchers.}
+\begin{figure*}
+  \centering
+  \includegraphics{plots/overview_speedup.pdf}
+  \caption{Speedup for each prefetcher for all benchmarks and harmonic mean average speedup.}
   \label{fig:comparison}
-\end{figure}
+\end{figure*}
 
 
 An interesting example of how the different prefetchers differ, is the \texttt{ammp} benchmark.
