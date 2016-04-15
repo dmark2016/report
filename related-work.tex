@@ -22,14 +22,6 @@ prefetcher performance with speedups of $1.07\pm0.01$. In other words,
 the benchmarks we test with sometimes access memory in strides greater
 than block size.
 
-In \cite{bib:jahre} Jahre describes the RPT prefetching algorithm and that RPT
-is limited to constant strides.  In our experience RPT yields the best results
-when the table is updated each memory access as opposed to only on cache
-misses.
-
-\textit{Smith et al} \cite{bib:ghb} describes how GHB is more space efficient
-in terms of the prefetcher history table sizes.
-
 %There is a significant difference between CPU and memory speed.
 %In recent years, it has become increasingly important to speed up memory access to ensure that the CPU is not spending much of its time idle, waiting for data.
 %Prefetching is one technique used to reduce memory access time.
