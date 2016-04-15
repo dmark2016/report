@@ -9,10 +9,14 @@
 % conveying necessary information to your audience, and are
 % often worth more than a thousand words.
 
-The final prefetcher implemented during this project keeps a history of the
-previous memory requests issued and uses three different algorithms in a
-prioritized order to determine which addresses to prefetch.
-An overview can be found in Figure \ref{fig:prefetcher}.
+The final prefetcher implemented during this project keeps a history
+of the previous memory requests issued and uses three different
+algorithms in a prioritized order to determine which addresses to
+prefetch. An overview can be found in Figure \ref{fig:prefetcher}.
+Our hypothesis is that by falling back on RPT and SDP when there is
+insufficient data to use delta-correlation, we utilize the knowledge
+accumulated in the history buffer to a higher degree and issue more
+good prefetches as a result.
 
 \begin{figure*}[h]
 	\centering
