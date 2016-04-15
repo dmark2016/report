@@ -71,43 +71,51 @@
       \expandafter\def\csname LT8\endcsname{\color{black}}%
     \fi
   \fi
-  \setlength{\unitlength}{0.0500bp}%
-  \begin{picture}(10204.00,2834.00)%
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(7200.00,5040.00)%
     \gplgaddtomacro\gplbacktext{%
       \csname LTb\endcsname%
-      \put(946,704){\makebox(0,0)[r]{\strut{} 0.5}}%
-      \put(946,970){\makebox(0,0)[r]{\strut{} 0.6}}%
-      \put(946,1237){\makebox(0,0)[r]{\strut{} 0.7}}%
-      \put(946,1503){\makebox(0,0)[r]{\strut{} 0.8}}%
-      \put(946,1770){\makebox(0,0)[r]{\strut{} 0.9}}%
-      \put(946,2036){\makebox(0,0)[r]{\strut{} 1}}%
-      \put(946,2303){\makebox(0,0)[r]{\strut{} 1.1}}%
-      \put(946,2569){\makebox(0,0)[r]{\strut{} 1.2}}%
-      \put(1518,484){\makebox(0,0){\strut{} 1}}%
-      \put(2398,484){\makebox(0,0){\strut{} 2}}%
-      \put(3277,484){\makebox(0,0){\strut{} 3}}%
-      \put(4157,484){\makebox(0,0){\strut{} 4}}%
-      \put(5037,484){\makebox(0,0){\strut{} 5}}%
-      \put(5916,484){\makebox(0,0){\strut{} 6}}%
-      \put(6796,484){\makebox(0,0){\strut{} 7}}%
-      \put(176,1636){\rotatebox{-270}{\makebox(0,0){\strut{}Speedup}}}%
-      \put(4157,154){\makebox(0,0){\strut{}Prefetching degree}}%
+      \put(814,1584){\makebox(0,0)[r]{\strut{}$0.5$}}%
+      \put(814,2040){\makebox(0,0)[r]{\strut{}$0.6$}}%
+      \put(814,2496){\makebox(0,0)[r]{\strut{}$0.7$}}%
+      \put(814,2952){\makebox(0,0)[r]{\strut{}$0.8$}}%
+      \put(814,3407){\makebox(0,0)[r]{\strut{}$0.9$}}%
+      \put(814,3863){\makebox(0,0)[r]{\strut{}$1$}}%
+      \put(814,4319){\makebox(0,0)[r]{\strut{}$1.1$}}%
+      \put(814,4775){\makebox(0,0)[r]{\strut{}$1.2$}}%
+      \put(946,1364){\makebox(0,0){\strut{}$1$}}%
+      \put(1922,1364){\makebox(0,0){\strut{}$2$}}%
+      \put(2898,1364){\makebox(0,0){\strut{}$3$}}%
+      \put(3875,1364){\makebox(0,0){\strut{}$4$}}%
+      \put(4851,1364){\makebox(0,0){\strut{}$5$}}%
+      \put(5827,1364){\makebox(0,0){\strut{}$6$}}%
+      \put(6803,1364){\makebox(0,0){\strut{}$7$}}%
     }%
     \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%
-      \put(9216,2459){\makebox(0,0)[r]{\strut{}ammp}}%
+      \put(176,3179){\rotatebox{-270}{\makebox(0,0){\strut{}Speedup}}}%
+      \put(3874,1034){\makebox(0,0){\strut{}Prefetching degree}}%
       \csname LTb\endcsname%
-      \put(9216,2239){\makebox(0,0)[r]{\strut{}applu}}%
+      \put(3019,833){\makebox(0,0)[r]{\strut{}ammp}}%
       \csname LTb\endcsname%
-      \put(9216,2019){\makebox(0,0)[r]{\strut{}apsi}}%
+      \put(3019,613){\makebox(0,0)[r]{\strut{}applu}}%
       \csname LTb\endcsname%
-      \put(9216,1799){\makebox(0,0)[r]{\strut{}art110}}%
+      \put(3019,393){\makebox(0,0)[r]{\strut{}apsi}}%
       \csname LTb\endcsname%
-      \put(9216,1579){\makebox(0,0)[r]{\strut{}art470}}%
+      \put(3019,173){\makebox(0,0)[r]{\strut{}art110}}%
       \csname LTb\endcsname%
-      \put(9216,1359){\makebox(0,0)[r]{\strut{}bzip2-graphic}}%
+      \put(5590,833){\makebox(0,0)[r]{\strut{}art470}}%
       \csname LTb\endcsname%
-      \put(9216,1139){\makebox(0,0)[r]{\strut{}bzip2-program}}%
+      \put(5590,613){\makebox(0,0)[r]{\strut{}bzip2-graphic}}%
+      \csname LTb\endcsname%
+      \put(5590,393){\makebox(0,0)[r]{\strut{}bzip2-program}}%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{plots/sequential}}%
