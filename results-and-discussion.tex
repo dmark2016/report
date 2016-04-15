@@ -15,6 +15,7 @@
 % as an explanation as to why the results are as they are
 
 
+
 An interesting example of how the different prefetchers differ, is the \texttt{ammp} benchmark.
 This is the benchmark where the sequential prefetcher performs worst;
 it degrades performance significantly and a higher prefetching degree only makes
@@ -34,20 +35,19 @@ accesses memory in a regular, but striding fashion.
 
 The remaining prefetchers all handle strided access and results comparable with
 SDP should therefore be expected.
-For GHB/DC, the best results are achieved with a prefetching degree of $7$.
+For delta correlation, the best results are achieved with a prefetching degree of $6$.
 At this degree, this results in $14m$ prefetches being identified, where $84\%$
 or around $12m$ turns out to be useful.
-The $2.3m$ fetches for useless data is probably what makes GHB/DC less effective
-than SDP.
+The $2.3m$ fetches for useless data is probably what makes delta correlation
+less effective than SDP despite the improved coverage.
 %TODO: Comment how many of these were already in MSHRs?
 This is also suggested by the $44\%$ increase in average cache miss latency.
 
-For the prefetcher developed during this project, GHB/H, the speedup is slightly
-worse than for the pure GHB/DC approach.
-Despite falling back to RPT and eventually SDP, the GHB/H approach identifies
-fewer prefetches than the GHB/DC prefetcher.
-%TODO: Y?!
-
+For the hybrid prefetcher developed during this project, the speedup is slightly
+worse than for the pure delta correlation approach.
+Despite falling back to RPT and eventually SDP, the hybrid approach identifies
+fewer prefetches than the delta correlating prefetcher.
+\todo{Why? It should have more}
 
 
 
