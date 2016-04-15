@@ -8,6 +8,11 @@ Of the different prefetching strategies explored in this report,
 global history buffer with delta correlation has the best average
 speedup while no benchmark has a speedup of less than 0.95.
 
+This prefetcher has a higher average speedup than our hybrid
+approach. This falsifies our hypothesis that we would achieve
+a higher average speedup by falling back on RTP and SDP when
+DC does not find anything to prefetch.
+
 However, while this prefetcher has the highest average
 speedup, simpler prefetchers are sometimes better on
 individual benchmarks, showing that while global history buffer
