@@ -14,13 +14,12 @@
 % consists of two parts: the results of your experiments, as well
 % as an explanation as to why the results are as they are
 
-To get an understanding of their characteristics, we implement and
-test the following prefetchers; sequential, SDP, RPT, DC and hybrid.
-Figure \ref{fig:comparison} shows the speedup associated with each
-prefetcher for each benchmark, as well as the average speedup across
-benchmarks calculated by harmonic mean. We test with prefetching
-degree varying from $1$ to $7$. For each prefetcher, numbers for the
-plot are taken from the degree yielding the highest average speedup.
+The speedup associated with each prefetcher for each benchmark, as
+well as the average speedup across benchmarks calculated by harmonic
+mean, is shown in Figure \ref{fig:comparison}. We test with
+prefetching degree varying from $1$ to $7$. For each prefetcher,
+numbers for the plot are taken from the degree yielding the highest
+average speedup.
 
 The \texttt{ammp} benchmark is noticably more sensitive to different
 prefetching strategies than the rest. This indicates that relative to
@@ -31,7 +30,7 @@ it is easy to make good prefetching predictions.
 highest speedup.  For the rest, speedup is $1.00\pm0.10$. To better
 understand why this is, we look at the accuracy and coverage of the
 various prefetchers in Figures \ref{fig:accuracy} and
-\ref{fig:coverage}. For most of the benchmarks with low no or low
+\ref{fig:coverage}. For most of the benchmarks with low
 speedup, either accuracy is low, coverage is low or a combination of
 both.
 
@@ -62,23 +61,23 @@ we try to understand why.
 
 
 An interesting example of how the different prefetchers differ, is the
-\texttt{ammp} benchmark.  \todo{Add figure with the prefetchers' performance on
-ammp} This is the benchmark where the sequential prefetcher performs worst; it
-degrades performance significantly and a higher prefetching degree only makes
-it worse.  For degree 1, it has an extremely low accuracy of only $0.1\%$ which
-means most of the effort put into prefetching blocks is wasted.
+\texttt{ammp} benchmark.  This is the benchmark where the sequential
+prefetcher performs worst; it degrades performance significantly and a
+higher prefetching degree only makes it worse.  For degree 1, it has
+an extremely low accuracy of only $0.1\%$ which means most of the
+effort put into prefetching blocks is wasted.
 
 The SDP prefetcher on the other hand performs quite well and gives a speedup of
 $1.7$ for a prefetching degree of $3$. For this degree, an accuracy of $86\%$
 means much fewer of the prefetches are wasted effort.  As the only difference
 between this and the sequential prefetcher is the variable stride used for SDP,
 this indicates that the \texttt{ammp} benchmark accesses memory in a linear,
-but strided fashion.  \todo{Is this consistent with the benchmark description?}
+but strided fashion.
 
 The remaining prefetchers all handle strided access and results comparable with
 SDP should therefore be expected.  For delta correlation, the best results are
 achieved with a prefetching degree of $6$.  At this degree, $84\%$ of the
-prefetches turns out to be useful.  The fetches for useless data is probably
+prefetches turn out to be useful.  The fetches for useless data is probably
 what makes delta correlation less effective than SDP despite the improved
 coverage.
 %TODO: Comment how many of these were already in MSHRs?
@@ -93,7 +92,6 @@ the reduced performance.
 \todo{Why? It should have more}
 
 Another interesting benchmark is \texttt{wupwise}.
-\todo{Add figure}
 In this benchmark, SDP, delta correlating and hybrid prefetchers all give a
 consistent speedup of $1.25$ for all the degrees tested.
 RPT is also giving a very consistent speedup of around $1.21$, which is sightly

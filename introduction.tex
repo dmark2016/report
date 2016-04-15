@@ -20,13 +20,13 @@ L1 and L2 are often local to each core, while L3 and L4 are shared.
 While cache hierarchies reduce the effect of the memory gap, performance can still be improved.
 When a program requests data that is not in cache, we say that a cache miss has occurred.
 Every time a miss happens, the latency penalty of accessing main memory is incurred.
-To minimize the number of cache misses, and thereby increasing performance, a technique called prefeching is utilized.
+To minimize the number of cache misses, and thereby increasing performance, a technique called prefetching is utilized.
 By predicting what data is required by the processor, we can avoid a cache miss by fetching it in advance.
 
 In this paper we evaluate various prefetching techniques across a collection of benchmarks.
 We also present a prefetcher that combines ideas from several other schemes and
 we show how and why this approach is outperformed by simpler schemes.
-Our hybrid prefetcher achieves an average speedup of 1.08 and our best prefetcher achieves an average speedup of 1.09.
+Our hybrid prefetcher achieves an average speedup of 1.08 while the best prefetcher we evaluate achieves an average speedup of 1.09.
 
 Section~\ref{sec:background} provides a background on various prefetcher strategies.
 In Section~\ref{sec:prefetcher} our final prefetcher design is presented.
