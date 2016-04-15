@@ -12,7 +12,7 @@
 The final prefetcher implemented during this project keeps a history of the
 previous memory requests issued and uses three different algorithms in a
 prioritized order to determine which addresses to prefetch.
-An overview of this can be found in Figure \ref{fig:prefetcher}.
+An overview can be found in Figure \ref{fig:prefetcher}.
 
 \begin{figure*}[h]
 	\centering
@@ -64,7 +64,7 @@ several times to produce all prefetch addresses.
 
 In the cases where the history contains one, and only one delta, the prefetcher
 uses this delta to issue prefetches as for the previous algorithm.
-This is equivalent to what a stride direct prefetcher would do.
+This is equivalent to what a stride directed prefetcher would do.
 
 It is important to note that both the index and the global history buffer is
 limited in size. For the history buffer, this is handled by overwriting the
