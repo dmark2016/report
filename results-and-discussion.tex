@@ -23,8 +23,8 @@ average speedup.
 
 The \texttt{ammp} benchmark is noticably more sensitive to different
 prefetching strategies than the rest. This indicates that relative to
-the other benchmarks, \texttt{ammp} spends more time in code for which
-it is easy to make good prefetching predictions.
+the other benchmarks, \texttt{ammp} has a memory access pattern more
+easily predictable using some methods than others.
 
 \texttt{ammp} and \texttt{wupwise} are the two benchmarks with the
 highest speedup.  For the rest, speedup is $1.00\pm0.10$. To better
@@ -71,27 +71,32 @@ we try to understand why.
 \end{figure*}
 
 
-An interesting example of how the different prefetchers differ, is the
-\texttt{ammp} benchmark.  This is the benchmark where the sequential
-prefetcher performs worst; it degrades performance significantly and a
-higher prefetching degree only makes it worse.  For degree 1, it has
-an extremely low accuracy of only $0.1\%$ which means most of the
-effort put into prefetching blocks is wasted.
+An interesting example showing how the prefetchers differ, is the \texttt{ammp}
+benchmark.
+This is the benchmark where the performance of the sequential prefetcher is at
+its worst;
+it degrades performance significantly and a higher prefetching degree only makes
+it worse.
+Already at degree 1, the accuracy is extremely low at only $0.1\%$, which means
+most of the effort put into prefetching blocks is wasted and therefore explains
+the low performance.
 
 The SDP prefetcher on the other hand performs quite well and gives a speedup of
-$1.7$ for a prefetching degree of $3$. For this degree, an accuracy of $86\%$
-means much fewer of the prefetches are wasted effort.  As the only difference
-between this and the sequential prefetcher is the variable stride used for SDP,
+$1.7$ for a prefetching degree of $3$.
+For this degree, an accuracy of $86\%$ means much fewer of the prefetches are
+wasted effort.
+As the only difference between this and the sequential prefetcher is the
+variable stride used in SDP,
 this indicates that the \texttt{ammp} benchmark accesses memory in a linear,
 but strided fashion.
 
 The remaining prefetchers all handle strided access and results comparable with
-SDP should therefore be expected.  For delta correlation, the best results are
-achieved with a prefetching degree of $6$.  At this degree, $84\%$ of the
-prefetches turn out to be useful.  The fetches for useless data is probably
-what makes delta correlation less effective than SDP despite the improved
-coverage.
-%TODO: Comment how many of these were already in MSHRs?
+SDP should therefore be expected. 
+For delta correlation, the best results are achieved with a prefetching degree
+of $6$.
+At this degree, $84\%$ of the prefetches turns out to be useful.
+The fetches for useless data is probably what makes delta correlation less
+effective than SDP despite the improved coverage.
 This is also suggested by the $44\%$ increase in average cache miss latency.
 
 For the hybrid prefetcher developed during this project, the speedup on \texttt{ammp} is slightly
@@ -165,4 +170,5 @@ prefetches maintain an accuracy above $90\%$.
 Furthermore, we have an example of the sequential prefetcher performing much
 better than all the stride based prefetchers for all degrees above 1.
 This may be due to very irregular strides, causing the stride based prefetchers
-to fetch useless blocks, which degrade performance.
+to fetch useless blocks based on the calculated stride, which degrade
+performance.
