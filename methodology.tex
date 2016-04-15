@@ -35,8 +35,7 @@ a place-and-route package used in microchip design, \texttt{wupwise}, a solver f
 equations in the field of quantum chromodynamics, \texttt{swim} a weather prediction program,
 \texttt{applu} and \texttt{ammp}, differential equation solvers, \texttt{galgel}, a solver for a
 particular problem in fluid dynamics, \texttt{art}, a neural network, and \texttt{apsi}, a program used to predict spread of air pollution.
-These programs have different memory access patterns, helping us expose flaws in prefetching schemes.
-For each program, a several metrics are reported by the simulator.
+These programs have different memory access patterns, helping us to expose flaws in prefetching schemes.
 
 \subsection{Performance measures}
 Several different characteristics are used to measure the performance
@@ -46,14 +45,14 @@ prefetcher compared to running without a prefetcher:
 $speedup = \frac{execution time_{without prefetcher}}{execution time_{with prefetcher}}$.
 
 In additon, accuracy and coverage are useful measures. Accuracy measures
-how many of the prefetches were actually needed:
+how often the prefetcher's prediction is correct:
 
 $accuracy = \frac{good prefetches}{total prefetches}$.
 
 Even if the prefetches were needed it is not guaranteed that they
 were used. They may have been issued too late.
 
-Coverage measures how many of the misses were removed by the
+Coverage measures how many of the misses were avoided by the
 prefetcher:
 
 $coverage = \frac{good prefetches}{cache misses without prefetching}$.
