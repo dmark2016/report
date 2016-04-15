@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-In 1965 Gordon E. Moore observed that the transistor density on integrated circuits approximately doubles every 2 years ,
+In 1965 Gordon E. Moore observed that the transistor density on integrated circuits approximately doubles every 2 years,
 and predicted that it would continue to do so for many years~\cite{bib:moore}.
 Up until recently, this prediction has held true~\cite{bib:moore-slowdown}.
 Processor performance has increased alongside transistor density.
@@ -13,7 +13,7 @@ Modern computer architectures often include different mechanisms for reducing th
 One such mechanism is the cache hierarchy.
 
 The idea behind the cache hierarchy is to have frequently accessed data in small, fast memory close to the processor.
-By reducing the total amount of requests that have to go through to main memory, the processor spends less time idling.
+By reducing the total amount of requests that have to go through to main memory, the processor spends less time idle.
 Modern architectures often have 3-4 levels of cache between processor cores and main memory.
 L1 and L2 are often local to each core, while L3 and L4 are shared.
 
@@ -25,7 +25,8 @@ By predicting what data will be required next by the processor, we can avoid a c
 
 In this paper we evaluate various prefetching techniques based on their performance across a wide range of programs.
 We also present a prefetcher that combines ideas from several other schemes.
-// TODO: Write one sentence about result, what the hell have we actually achieved.
+We were able to implement a prefetcher which achieved a speedup for several different benchmarks and only negatively impacting one benchmark.
+%// TODO: Write one sentence about result, what the hell have we actually achieved.
 
 Section~\ref{sec:background} provides a background on various prefetcher strategies.
 In Section~\ref{sec:prefetcher} our final prefetcher design is presented.
