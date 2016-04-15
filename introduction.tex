@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-In 1965 Gordon E. Moore observed that the transistor density on integrated circuits approximately doubles every 2 years,
+In 1965 Gordon E. Moore observed that the transistor density on integrated circuits doubles approximately every 2 years,
 and predicted that it would continue to do so for many years~\cite{bib:moore}.
 Up until recently, this prediction has held true~\cite{bib:moore-slowdown}.
 Processor performance has increased alongside transistor density.
@@ -21,17 +21,17 @@ While cache hierarchies reduce the effect of the memory gap, performance can sti
 When a program requests data that is not in cache, we say that a cache miss has occurred.
 Every time a miss happens, the latency penalty of accessing main memory is incurred.
 To minimize the number of cache misses, and thereby increasing performance, a technique called prefeching is utilized.
-By predicting what data will be required next by the processor, we can avoid a cache miss by fetching data early.
+By predicting what data is required by the processor, we can avoid a cache miss by fetching it in advance.
 
-In this paper we evaluate various prefetching techniques based on their performance across a wide range of programs.
-We also present a prefetcher that combines ideas from several other schemes.
-We show how and why this approach is outperformed by simpler schemes.
-%// TODO: Write one sentence about result, what the hell have we actually achieved.
+In this paper we evaluate various prefetching techniques across a collection of benchmarks.
+We also present a prefetcher that combines ideas from several other schemes and
+we show how and why this approach is outperformed by simpler schemes.
+\todo{Add some numbers}
 
 Section~\ref{sec:background} provides a background on various prefetcher strategies.
 In Section~\ref{sec:prefetcher} our final prefetcher design is presented.
 Subsequently, our methodology and process is reviewed in Section~\ref{sec:methodology}.
-Finally, we present and discuss our findings (Section~\ref{sec:results-and-discussion}), provide an overview of some related works (Section~\ref{sec:related-work}) and a conclusion (Section~\ref{sec:conclusion}).
+Finally, we present and discuss our findings in Section~\ref{sec:results-and-discussion}, provide an overview of some related works in Section~\ref{sec:related-work} and a conclusion in Section~\ref{sec:conclusion}.
 
 %In modern computer architecture, the memory hierarchy plays an important part.
 %Without intelligent usage of caches and scheduling of requests to main memory, the processor will spend an undesirable amount of time idle while waiting for data.
