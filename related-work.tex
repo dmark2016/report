@@ -22,12 +22,13 @@ prefetcher performance with speedups of $1.07\pm0.01$. In other words,
 the benchmarks we test with sometimes access memory in strides greater
 than block size.
 
-In \cite{bib:jahre}
-Jahre describes the RPT prefetching algorithm and that RPT is limited to constant strides.
-In our experince RPT yielded best result when the algorithm either trained or fetched the missing block on each memory access.
+In \cite{bib:jahre} Jahre describes the RPT prefetching algorithm and that RPT
+is limited to constant strides.  In our experience RPT yields the best results
+when the table is updated each memory access as opposed to only on cache
+misses.
 
-\textit{Smith et al} \cite{bib:ghb}
-describes how GHB is more space efficient in terms of the prefetcher history table sizes.
+\textit{Smith et al} \cite{bib:ghb} describes how GHB is more space efficient
+in terms of the prefetcher history table sizes.
 
 \todo{In general: compare our findings to those of others}
 
