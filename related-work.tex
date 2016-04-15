@@ -10,17 +10,17 @@ Reducing the memory access time is an important issue in computer design.
 Memory prefetching is a technique to reduce memory access times,
 and an significant amount of research have gone into memory prefetchers.
 
-\textit{Evaluation of Hardware-Based Stride and Sequential Prefetching in Shared-Memory Multiprocessors} \cite{bib:stride}
+\textit{Stenstrom et al} \cite{bib:stride}
 is a paper on stride and sequential prefetching.
 The authors findings were that sequential prefetching in some cases performed better than stride prefetching.
 They argued that a significant amount of the strides were shorter than the block size.
 However, \todo{Add our findings}
 
-In the Doctoral thesis \textit{Managing Shared Resources in Chip Multiprocessor Memory Systems} \cite{bib:jahre}
+In \cite{bib:jahre}
 Jahre describes the RPT prefetching algorithm and that RPT is limited to constant strides.
-In our experince RPT yielded best result when the alorithm either trained or fetched the missing block on each memory access.
+In our experince RPT yielded best result when the algorithm either trained or fetched the missing block on each memory access.
 
-The paper \textit{Data Cacheprefetching Using a Global History Buffer} \cite{bib:ghb}
+\textit{Smith et al} \cite{bib:ghb}
 describes how GHB is more space efficient in terms of the prefetcher history table sizes.
 
 \todo{In general: compare our findings to those of others}
