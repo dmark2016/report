@@ -2,16 +2,15 @@
 =table
 yformat=%.2f
 rotateby=-25
-ammp            
-applu           
-apsi            
-art110          
-art470          
-bzip2_graphic   
-bzip2_program   
-bzip2_source    
-galgel          
-swim            
-twolf           
-wupwise         
-overall         
+ammp            0.00    0.83    0.69    0.82    0.79
+applu           0.27    0.75    0.60    0.38    0.60
+apsi            0.02    0.27    0.24    0.27    0.27
+art110          0.13    0.52    0.48    0.53    0.51
+art470          0.13    0.52    0.48    0.53    0.51
+bzip2_graphic   0.31    0.53    0.24    0.32    0.33
+bzip2_program   0.34    0.71    0.53    0.42    0.42
+bzip2_source    0.36    0.62    0.01    0.42    0.43
+galgel          0.10    0.38    0.15    0.49    0.42
+swim            0.21    0.34    0.34    0.30    0.30
+twolf           0.18    0.34    0.13    0.03    0.24
+wupwise         0.29    0.67    0.56    0.67    0.67
