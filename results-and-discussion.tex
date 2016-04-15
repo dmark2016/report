@@ -72,19 +72,36 @@ the reduced performance.
 
 Another interesting benchmark is \texttt{wupwise}.
 \todo{Add figure}
-In this benchmark, SDP, RPT and delta correlation all give a consistent speedup
-of $1.25$ for all the degrees tested.
-This suggests there are long sequences of strided memory access.
-The poor performance of the sequential prefetcher also suggests the stride is
-quite large, such that a sequential fetch of the following block only makes
-performance worse as the extra block is not needed.
+In this benchmark, SDP, delta correlating and hybrid prefetchers all give a
+consistent speedup of $1.25$ for all the degrees tested.
+RPT is also giving a very consistent speedup of around $1.21$, which is sightly
+worse than sequential for degrees greater than 1.
+This can be explained if the benchmarks contains long runs of strided memory
+access.
+Thus the first block after the requested one may not be needed, as assumed in
+sequential prefetching, but the next one may be.
+As a result, sequential prefetching with a higher degree performs better up to a
+certain limit at the maximum stride observed.
 
-\todo{Why does RPT do it badly? Low coverage? Low accuracy?}
-Even though the RPT prefetcher uses strides to predict memory requests, it
-performs worse than the sequential prefetcher for degrees higher than 2.
-As the performance of the hybrid prefetcher does not degrade for higher degrees,
-it is reasonable to assume the RTP part of the hybrid prefetcher is not invoked
-often enough to make a difference for this benchmark.
+Comparing SDP and RPT, both stride based, it becomes clear that the lower
+performance of RPT can be explained by a combination of a slightly lower
+accuracy and a lower number of identified prefetches.
+This may be due to RPT, being more restrictive, only identifies prefetches when
+the two last deltas are equal, in contrast to SDP which only requires one.
+On the other hand, delta correlation still maintains the same performance while
+requiring even more history.
+A possible explanation may be that the benchmark's memory access pattern
+includes a lot of repeating patterns exploitable by delta correlation.
+If the patterns also include some runs of equal deltas, this should be
+beneficial to SDP as well because it utilizes shorter runs of equal deltas
+better than RPT.
+
+A noteworthy observation is that the hybrid prefetcher does not perform worse
+than SDP and delta correlation even though it follows the RPT policy when there
+are only two history entries.
+This is natural since delta correlation is always used when possible, otherwise
+SDP provides adequate prediction and the few predictions made using RPT does not
+affect the overall performance.
 
 The only benchmark where the hybrid prefetcher performs notably worse than the
 delta correlating prefetcher is the \texttt{twolf} benchmark.
