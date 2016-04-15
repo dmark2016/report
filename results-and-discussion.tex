@@ -41,21 +41,32 @@ we try to understand why.
 \begin{figure*}
   \centering
   \includegraphics{plots/overview_speedup.pdf}
-  \caption{Speedup for each prefetcher for all benchmarks and harmonic mean average speedup.}
+  \caption{
+    Speedup as measured during simulation for each prefetcher grouped by
+    benchmark.
+    The degree for each prefetcher has been selected to maximize the overall
+    performance as measured by the harmonic average displayed to the right.
+  }
   \label{fig:comparison}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics{plots/accuracy_overview.pdf}
-  \caption{Comparison of prefetcher accuracy for all benchmarks.}
+  \caption{
+      Comparison of prefetcher accuracy for all benchmarks.
+      The degrees have been chosen to maximize the harmonic average speedup.
+  }
   \label{fig:accuracy}
 \end{figure*}
 
 \begin{figure*}
   \centering
   \includegraphics{plots/coverage_overview.pdf}
-  \caption{Comparison of prefetcher coverage for all benchmarks.}
+  \caption{
+      Comparison of prefetcher coverage for all benchmarks.
+      The degrees have been chosen to maximize the harmonic average speedup.
+  }
   \label{fig:coverage}
 \end{figure*}
 
