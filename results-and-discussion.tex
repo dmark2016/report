@@ -167,8 +167,19 @@ This happens for degrees ranging from $1$ to $4$, which is due to a higher
 number of identified prefetches by the hybrid implementation while both
 prefetches maintain an accuracy above $90\%$.
 
-Furthermore, we have an example of the sequential prefetcher performing much
-better than all the stride based prefetchers for all degrees above 1.
+Furthermore, for the \texttt{applu} benchmark, the sequential prefetcher
+performs much better than all the stride based prefetchers for degrees above 1,
+as is visible in Figure \ref{fig:applu}.
 This may be due to very irregular strides, causing the stride based prefetchers
 to fetch useless blocks based on the calculated stride, which degrade
 performance.
+
+\begin{figure}
+  \centering
+  \includegraphics{plots/applu.pdf}
+  \caption{
+      Speedup for the different prefetchers as a function of prefetch degree
+      when running the \texttt{applu} benchmark.
+  }
+  \label{fig:applu}
+\end{figure}
