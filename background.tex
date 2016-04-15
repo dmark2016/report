@@ -21,7 +21,7 @@
 %memory, it has to be small to not be too expensive. Therefore it
 %is limited what can be stored in the cache
 
-In a cache hierarchy with no prefetcher, data is fetched from main memory every time a cache miss occurs.
+In a cache hierarchy with no prefetcher, data is fetched from a lower level every time a cache miss occurs.
 By prefetching data, ensuring that it is present in cache at the right time, we can reduce the amount of misses and thereby improve performance.
 There are several prefetching strategies available.
 
@@ -39,7 +39,7 @@ later block can improve performance.
 In addition, more than one block can be prefetched at a time.
 We refer to this as increasing the prefetching degree. If the
 running program traverses memory in a linear fashion, this can
-improve performance. If too many blocks are prefetched, blocks that
+improve performance. If too many blocks are prefetched, it can cause cache pollution, where blocks that
 are still in use can be evicted from the cache, which can degrade performance.
 
 \subsubsection{Stride Directed Prefetching}
