@@ -27,6 +27,14 @@ prefetching strategies than the rest. This indicates that relative to
 the other benchmarks, \texttt{ammp} spends more time in code for which
 it is easy to make good prefetching predictions.
 
+\texttt{ammp} and \texttt{wupwise} are the two benchmarks with the
+highest speedup.  For the rest, speedup is $1.00\pm0.10$. To better
+understand why this is, we look at the accuracy and coverage of the
+various prefetchers in Figures \ref{fig:accuracy} and
+\ref{fig:coverage}. For most of the benchmarks with low no or low
+speedup, either accuracy is low, coverage is low or a combination of
+both.
+
 We see that our hybrid prefetcher has lower average speedup than the
 simple DC implementation.  By comparing the results in greater detail,
 we try to understand why.
