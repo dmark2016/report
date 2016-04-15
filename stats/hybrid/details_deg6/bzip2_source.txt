@@ -1,0 +1,536 @@
+
+---------- Begin Simulation Statistics ----------
+host_inst_rate                                 506189                       # Simulator instruction rate (inst/s)
+host_mem_usage                                 402620                       # Number of bytes of host memory used
+host_seconds                                    39.51                       # Real time elapsed on the host
+host_tick_rate                              423701352                       # Simulator tick rate (ticks/s)
+sim_freq                                 1000000000000                       # Frequency of simulated ticks
+sim_insts                                    20000003                       # Number of instructions simulated
+sim_seconds                                  0.016741                       # Number of seconds simulated
+sim_ticks                                 16740937000                       # Number of ticks simulated
+system.cpu.dcache.ReadReq_accesses            3148290                       # number of ReadReq accesses(hits+misses)
+system.cpu.dcache.ReadReq_avg_miss_latency 17572.492163                       # average ReadReq miss latency
+system.cpu.dcache.ReadReq_avg_mshr_miss_latency 14702.641644                       # average ReadReq mshr miss latency
+system.cpu.dcache.ReadReq_hits                3090870                       # number of ReadReq hits
+system.cpu.dcache.ReadReq_miss_latency     1009012500                       # number of ReadReq miss cycles
+system.cpu.dcache.ReadReq_miss_rate          0.018238                       # miss rate for ReadReq accesses
+system.cpu.dcache.ReadReq_misses                57420                       # number of ReadReq misses
+system.cpu.dcache.ReadReq_mshr_hits              1204                       # number of ReadReq MSHR hits
+system.cpu.dcache.ReadReq_mshr_miss_latency    826509000                       # number of ReadReq MSHR miss cycles
+system.cpu.dcache.ReadReq_mshr_miss_rate     0.017856                       # mshr miss rate for ReadReq accesses
+system.cpu.dcache.ReadReq_mshr_misses           56215                       # number of ReadReq MSHR misses
+system.cpu.dcache.WriteReq_accesses           2942187                       # number of WriteReq accesses(hits+misses)
+system.cpu.dcache.WriteReq_avg_miss_latency 24619.927041                       # average WriteReq miss latency
+system.cpu.dcache.WriteReq_avg_mshr_miss_latency 21364.179818                       # average WriteReq mshr miss latency
+system.cpu.dcache.WriteReq_hits               2939994                       # number of WriteReq hits
+system.cpu.dcache.WriteReq_miss_latency      53991500                       # number of WriteReq miss cycles
+system.cpu.dcache.WriteReq_miss_rate         0.000745                       # miss rate for WriteReq accesses
+system.cpu.dcache.WriteReq_misses                2193                       # number of WriteReq misses
+system.cpu.dcache.WriteReq_mshr_hits              102                       # number of WriteReq MSHR hits
+system.cpu.dcache.WriteReq_mshr_miss_latency     44672500                       # number of WriteReq MSHR miss cycles
+system.cpu.dcache.WriteReq_mshr_miss_rate     0.000711                       # mshr miss rate for WriteReq accesses
+system.cpu.dcache.WriteReq_mshr_misses           2091                       # number of WriteReq MSHR misses
+system.cpu.dcache.avg_blocked_cycles::no_mshrs     no_value                       # average number of cycles each access was blocked
+system.cpu.dcache.avg_blocked_cycles::no_targets 49944.444444                       # average number of cycles each access was blocked
+system.cpu.dcache.avg_refs                 104.166353                       # Average number of references to valid blocks.
+system.cpu.dcache.blocked::no_mshrs                 0                       # number of cycles access was blocked
+system.cpu.dcache.blocked::no_targets              18                       # number of cycles access was blocked
+system.cpu.dcache.blocked_cycles::no_mshrs            0                       # number of cycles access was blocked
+system.cpu.dcache.blocked_cycles::no_targets       899000                       # number of cycles access was blocked
+system.cpu.dcache.cache_copies                      0                       # number of cache copies performed
+system.cpu.dcache.demand_accesses             6090477                       # number of demand (read+write) accesses
+system.cpu.dcache.demand_avg_miss_latency 17831.748109                       # average overall miss latency
+system.cpu.dcache.demand_avg_mshr_miss_latency 14941.541179                       # average overall mshr miss latency
+system.cpu.dcache.demand_hits                 6030864                       # number of demand (read+write) hits
+system.cpu.dcache.demand_miss_latency      1063004000                       # number of demand (read+write) miss cycles
+system.cpu.dcache.demand_miss_rate           0.009788                       # miss rate for demand accesses
+system.cpu.dcache.demand_misses                 59613                       # number of demand (read+write) misses
+system.cpu.dcache.demand_mshr_hits               1306                       # number of demand (read+write) MSHR hits
+system.cpu.dcache.demand_mshr_miss_latency    871181500                       # number of demand (read+write) MSHR miss cycles
+system.cpu.dcache.demand_mshr_miss_rate      0.009573                       # mshr miss rate for demand accesses
+system.cpu.dcache.demand_mshr_misses            58306                       # number of demand (read+write) MSHR misses
+system.cpu.dcache.fast_writes                       0                       # number of fast writes performed
+system.cpu.dcache.mshr_cap_events                   0                       # number of times MSHR cap was activated
+system.cpu.dcache.no_allocate_misses                0                       # Number of misses that were no-allocate
+system.cpu.dcache.occ_%::0                   0.954133                       # Average percentage of cache occupancy
+system.cpu.dcache.occ_blocks::0            977.032526                       # Average occupied blocks per context
+system.cpu.dcache.overall_accesses            6090477                       # number of overall (read+write) accesses
+system.cpu.dcache.overall_avg_miss_latency 17831.748109                       # average overall miss latency
+system.cpu.dcache.overall_avg_mshr_miss_latency 14941.541179                       # average overall mshr miss latency
+system.cpu.dcache.overall_avg_mshr_uncacheable_latency     no_value                       # average overall mshr uncacheable latency
+system.cpu.dcache.overall_hits                6030864                       # number of overall hits
+system.cpu.dcache.overall_miss_latency     1063004000                       # number of overall miss cycles
+system.cpu.dcache.overall_miss_rate          0.009788                       # miss rate for overall accesses
+system.cpu.dcache.overall_misses                59613                       # number of overall misses
+system.cpu.dcache.overall_mshr_hits              1306                       # number of overall MSHR hits
+system.cpu.dcache.overall_mshr_miss_latency    871181500                       # number of overall MSHR miss cycles
+system.cpu.dcache.overall_mshr_miss_rate     0.009573                       # mshr miss rate for overall accesses
+system.cpu.dcache.overall_mshr_misses           58306                       # number of overall MSHR misses
+system.cpu.dcache.overall_mshr_uncacheable_latency            0                       # number of overall MSHR uncacheable cycles
+system.cpu.dcache.overall_mshr_uncacheable_misses            0                       # number of overall MSHR uncacheable misses
+system.cpu.dcache.prefetch_accuracy          no_value                       # ratio of good prefetches to total prefetches
+system.cpu.dcache.prefetch_hits                     0                       # number of prefetched blocks that were accessed
+system.cpu.dcache.replacements                  56877                       # number of replacements
+system.cpu.dcache.sampled_refs                  57901                       # Sample count of references to valid blocks.
+system.cpu.dcache.soft_prefetch_mshr_full            0                       # number of mshr full events for SW prefetching instrutions
+system.cpu.dcache.tagsinuse                977.032526                       # Cycle average of tags in use
+system.cpu.dcache.total_refs                  6031336                       # Total number of references to valid blocks.
+system.cpu.dcache.warmup_cycle           505475260000                       # Cycle when the warmup percentage was hit.
+system.cpu.dcache.writebacks                     2045                       # number of writebacks
+system.cpu.dtb.data_accesses                        1                       # DTB accesses
+system.cpu.dtb.data_acv                             0                       # DTB access violations
+system.cpu.dtb.data_hits                            1                       # DTB hits
+system.cpu.dtb.data_misses                          0                       # DTB misses
+system.cpu.dtb.fetch_accesses                       0                       # ITB accesses
+system.cpu.dtb.fetch_acv                            0                       # ITB acv
+system.cpu.dtb.fetch_hits                           0                       # ITB hits
+system.cpu.dtb.fetch_misses                         0                       # ITB misses
+system.cpu.dtb.read_accesses                        1                       # DTB read accesses
+system.cpu.dtb.read_acv                             0                       # DTB read access violations
+system.cpu.dtb.read_hits                            1                       # DTB read hits
+system.cpu.dtb.read_misses                          0                       # DTB read misses
+system.cpu.dtb.write_accesses                       0                       # DTB write accesses
+system.cpu.dtb.write_acv                            0                       # DTB write access violations
+system.cpu.dtb.write_hits                           0                       # DTB write hits
+system.cpu.dtb.write_misses                         0                       # DTB write misses
+system.cpu.icache.ReadReq_accesses           11682143                       # number of ReadReq accesses(hits+misses)
+system.cpu.icache.ReadReq_avg_miss_latency 46666.666667                       # average ReadReq miss latency
+system.cpu.icache.ReadReq_avg_mshr_miss_latency 57357.142857                       # average ReadReq mshr miss latency
+system.cpu.icache.ReadReq_hits               11682131                       # number of ReadReq hits
+system.cpu.icache.ReadReq_miss_latency         560000                       # number of ReadReq miss cycles
+system.cpu.icache.ReadReq_miss_rate          0.000001                       # miss rate for ReadReq accesses
+system.cpu.icache.ReadReq_misses                   12                       # number of ReadReq misses
+system.cpu.icache.ReadReq_mshr_hits                 4                       # number of ReadReq MSHR hits
+system.cpu.icache.ReadReq_mshr_miss_latency       401500                       # number of ReadReq MSHR miss cycles
+system.cpu.icache.ReadReq_mshr_miss_rate     0.000001                       # mshr miss rate for ReadReq accesses
+system.cpu.icache.ReadReq_mshr_misses               7                       # number of ReadReq MSHR misses
+system.cpu.icache.avg_blocked_cycles::no_mshrs     no_value                       # average number of cycles each access was blocked
+system.cpu.icache.avg_blocked_cycles::no_targets        20000                       # average number of cycles each access was blocked
+system.cpu.icache.avg_refs               1460266.375000                       # Average number of references to valid blocks.
+system.cpu.icache.blocked::no_mshrs                 0                       # number of cycles access was blocked
+system.cpu.icache.blocked::no_targets               1                       # number of cycles access was blocked
+system.cpu.icache.blocked_cycles::no_mshrs            0                       # number of cycles access was blocked
+system.cpu.icache.blocked_cycles::no_targets        20000                       # number of cycles access was blocked
+system.cpu.icache.cache_copies                      0                       # number of cache copies performed
+system.cpu.icache.demand_accesses            11682143                       # number of demand (read+write) accesses
+system.cpu.icache.demand_avg_miss_latency 46666.666667                       # average overall miss latency
+system.cpu.icache.demand_avg_mshr_miss_latency 57357.142857                       # average overall mshr miss latency
+system.cpu.icache.demand_hits                11682131                       # number of demand (read+write) hits
+system.cpu.icache.demand_miss_latency          560000                       # number of demand (read+write) miss cycles
+system.cpu.icache.demand_miss_rate           0.000001                       # miss rate for demand accesses
+system.cpu.icache.demand_misses                    12                       # number of demand (read+write) misses
+system.cpu.icache.demand_mshr_hits                  4                       # number of demand (read+write) MSHR hits
+system.cpu.icache.demand_mshr_miss_latency       401500                       # number of demand (read+write) MSHR miss cycles
+system.cpu.icache.demand_mshr_miss_rate      0.000001                       # mshr miss rate for demand accesses
+system.cpu.icache.demand_mshr_misses                7                       # number of demand (read+write) MSHR misses
+system.cpu.icache.fast_writes                       0                       # number of fast writes performed
+system.cpu.icache.mshr_cap_events                   0                       # number of times MSHR cap was activated
+system.cpu.icache.no_allocate_misses                0                       # Number of misses that were no-allocate
+system.cpu.icache.occ_%::0                   0.012388                       # Average percentage of cache occupancy
+system.cpu.icache.occ_blocks::0              6.342496                       # Average occupied blocks per context
+system.cpu.icache.overall_accesses           11682143                       # number of overall (read+write) accesses
+system.cpu.icache.overall_avg_miss_latency 46666.666667                       # average overall miss latency
+system.cpu.icache.overall_avg_mshr_miss_latency 57357.142857                       # average overall mshr miss latency
+system.cpu.icache.overall_avg_mshr_uncacheable_latency     no_value                       # average overall mshr uncacheable latency
+system.cpu.icache.overall_hits               11682131                       # number of overall hits
+system.cpu.icache.overall_miss_latency         560000                       # number of overall miss cycles
+system.cpu.icache.overall_miss_rate          0.000001                       # miss rate for overall accesses
+system.cpu.icache.overall_misses                   12                       # number of overall misses
+system.cpu.icache.overall_mshr_hits                 4                       # number of overall MSHR hits
+system.cpu.icache.overall_mshr_miss_latency       401500                       # number of overall MSHR miss cycles
+system.cpu.icache.overall_mshr_miss_rate     0.000001                       # mshr miss rate for overall accesses
+system.cpu.icache.overall_mshr_misses               7                       # number of overall MSHR misses
+system.cpu.icache.overall_mshr_uncacheable_latency            0                       # number of overall MSHR uncacheable cycles
+system.cpu.icache.overall_mshr_uncacheable_misses            0                       # number of overall MSHR uncacheable misses
+system.cpu.icache.prefetch_accuracy          no_value                       # ratio of good prefetches to total prefetches
+system.cpu.icache.prefetch_hits                     0                       # number of prefetched blocks that were accessed
+system.cpu.icache.replacements                      0                       # number of replacements
+system.cpu.icache.sampled_refs                      8                       # Sample count of references to valid blocks.
+system.cpu.icache.soft_prefetch_mshr_full            0                       # number of mshr full events for SW prefetching instrutions
+system.cpu.icache.tagsinuse                  6.342496                       # Cycle average of tags in use
+system.cpu.icache.total_refs                 11682131                       # Total number of references to valid blocks.
+system.cpu.icache.warmup_cycle                      0                       # Cycle when the warmup percentage was hit.
+system.cpu.icache.writebacks                        0                       # number of writebacks
+system.cpu.idle_fraction                            0                       # Percentage of idle cycles
+system.cpu.itb.data_accesses                        0                       # DTB accesses
+system.cpu.itb.data_acv                             0                       # DTB access violations
+system.cpu.itb.data_hits                            0                       # DTB hits
+system.cpu.itb.data_misses                          0                       # DTB misses
+system.cpu.itb.fetch_accesses                       2                       # ITB accesses
+system.cpu.itb.fetch_acv                            0                       # ITB acv
+system.cpu.itb.fetch_hits                           2                       # ITB hits
+system.cpu.itb.fetch_misses                         0                       # ITB misses
+system.cpu.itb.read_accesses                        0                       # DTB read accesses
+system.cpu.itb.read_acv                             0                       # DTB read access violations
+system.cpu.itb.read_hits                            0                       # DTB read hits
+system.cpu.itb.read_misses                          0                       # DTB read misses
+system.cpu.itb.write_accesses                       0                       # DTB write accesses
+system.cpu.itb.write_acv                            0                       # DTB write access violations
+system.cpu.itb.write_hits                           0                       # DTB write hits
+system.cpu.itb.write_misses                         0                       # DTB write misses
+system.cpu.not_idle_fraction                        1                       # Percentage of non-idle cycles
+system.cpu.numCycles                                2                       # number of cpu cycles simulated
+system.cpu.num_insts                                2                       # Number of instructions executed
+system.cpu.num_refs                                 1                       # Number of memory references
+system.cpu.workload.PROG:num_syscalls               0                       # Number of system calls
+system.l2.HardPFReq_avg_mshr_miss_latency 36286.838198                       # average HardPFReq mshr miss latency
+system.l2.HardPFReq_mshr_miss_latency       231219733                       # number of HardPFReq MSHR miss cycles
+system.l2.HardPFReq_mshr_miss_rate                inf                       # mshr miss rate for HardPFReq accesses
+system.l2.HardPFReq_mshr_misses                  6372                       # number of HardPFReq MSHR misses
+system.l2.ReadExReq_accesses                     1685                       # number of ReadExReq accesses(hits+misses)
+system.l2.ReadExReq_avg_miss_latency     56360.655738                       # average ReadExReq miss latency
+system.l2.ReadExReq_avg_mshr_miss_latency 40540.983607                       # average ReadExReq mshr miss latency
+system.l2.ReadExReq_hits                         1624                       # number of ReadExReq hits
+system.l2.ReadExReq_miss_latency              3438000                       # number of ReadExReq miss cycles
+system.l2.ReadExReq_miss_rate                0.036202                       # miss rate for ReadExReq accesses
+system.l2.ReadExReq_misses                         61                       # number of ReadExReq misses
+system.l2.ReadExReq_mshr_miss_latency         2473000                       # number of ReadExReq MSHR miss cycles
+system.l2.ReadExReq_mshr_miss_rate           0.036202                       # mshr miss rate for ReadExReq accesses
+system.l2.ReadExReq_mshr_misses                    61                       # number of ReadExReq MSHR misses
+system.l2.ReadReq_accesses                      56224                       # number of ReadReq accesses(hits+misses)
+system.l2.ReadReq_avg_miss_latency       56480.091013                       # average ReadReq miss latency
+system.l2.ReadReq_avg_mshr_miss_latency  40790.252790                       # average ReadReq mshr miss latency
+system.l2.ReadReq_hits                          51829                       # number of ReadReq hits
+system.l2.ReadReq_miss_latency              248230000                       # number of ReadReq miss cycles
+system.l2.ReadReq_miss_rate                  0.078169                       # miss rate for ReadReq accesses
+system.l2.ReadReq_misses                         4395                       # number of ReadReq misses
+system.l2.ReadReq_mshr_hits                         2                       # number of ReadReq MSHR hits
+system.l2.ReadReq_mshr_miss_latency         179110000                       # number of ReadReq MSHR miss cycles
+system.l2.ReadReq_mshr_miss_rate             0.078098                       # mshr miss rate for ReadReq accesses
+system.l2.ReadReq_mshr_misses                    4391                       # number of ReadReq MSHR misses
+system.l2.UpgradeReq_accesses                     406                       # number of UpgradeReq accesses(hits+misses)
+system.l2.UpgradeReq_avg_miss_latency    56248.768473                       # average UpgradeReq miss latency
+system.l2.UpgradeReq_avg_mshr_miss_latency 40279.556650                       # average UpgradeReq mshr miss latency
+system.l2.UpgradeReq_miss_latency            22837000                       # number of UpgradeReq miss cycles
+system.l2.UpgradeReq_miss_rate                      1                       # miss rate for UpgradeReq accesses
+system.l2.UpgradeReq_misses                       406                       # number of UpgradeReq misses
+system.l2.UpgradeReq_mshr_miss_latency       16353500                       # number of UpgradeReq MSHR miss cycles
+system.l2.UpgradeReq_mshr_miss_rate                 1                       # mshr miss rate for UpgradeReq accesses
+system.l2.UpgradeReq_mshr_misses                  406                       # number of UpgradeReq MSHR misses
+system.l2.Writeback_accesses                     2045                       # number of Writeback accesses(hits+misses)
+system.l2.Writeback_hits                         2045                       # number of Writeback hits
+system.l2.avg_blocked_cycles::no_mshrs       no_value                       # average number of cycles each access was blocked
+system.l2.avg_blocked_cycles::no_targets     no_value                       # average number of cycles each access was blocked
+system.l2.avg_refs                           4.804079                       # Average number of references to valid blocks.
+system.l2.blocked::no_mshrs                         0                       # number of cycles access was blocked
+system.l2.blocked::no_targets                       0                       # number of cycles access was blocked
+system.l2.blocked_cycles::no_mshrs                  0                       # number of cycles access was blocked
+system.l2.blocked_cycles::no_targets                0                       # number of cycles access was blocked
+system.l2.cache_copies                              0                       # number of cache copies performed
+system.l2.demand_accesses                       57909                       # number of demand (read+write) accesses
+system.l2.demand_avg_miss_latency        56478.456014                       # average overall miss latency
+system.l2.demand_avg_mshr_miss_latency   40786.837376                       # average overall mshr miss latency
+system.l2.demand_hits                           53453                       # number of demand (read+write) hits
+system.l2.demand_miss_latency               251668000                       # number of demand (read+write) miss cycles
+system.l2.demand_miss_rate                   0.076948                       # miss rate for demand accesses
+system.l2.demand_misses                          4456                       # number of demand (read+write) misses
+system.l2.demand_mshr_hits                          2                       # number of demand (read+write) MSHR hits
+system.l2.demand_mshr_miss_latency          181583000                       # number of demand (read+write) MSHR miss cycles
+system.l2.demand_mshr_miss_rate              0.076879                       # mshr miss rate for demand accesses
+system.l2.demand_mshr_misses                     4452                       # number of demand (read+write) MSHR misses
+system.l2.fast_writes                               0                       # number of fast writes performed
+system.l2.mshr_cap_events                           0                       # number of times MSHR cap was activated
+system.l2.no_allocate_misses                        0                       # Number of misses that were no-allocate
+system.l2.occ_%::0                           0.315142                       # Average percentage of cache occupancy
+system.l2.occ_%::1                           0.036032                       # Average percentage of cache occupancy
+system.l2.occ_blocks::0                   5163.292889                       # Average occupied blocks per context
+system.l2.occ_blocks::1                    590.348500                       # Average occupied blocks per context
+system.l2.overall_accesses                      57909                       # number of overall (read+write) accesses
+system.l2.overall_avg_miss_latency       56478.456014                       # average overall miss latency
+system.l2.overall_avg_mshr_miss_latency  38137.724778                       # average overall mshr miss latency
+system.l2.overall_avg_mshr_uncacheable_latency     no_value                       # average overall mshr uncacheable latency
+system.l2.overall_hits                          53453                       # number of overall hits
+system.l2.overall_miss_latency              251668000                       # number of overall miss cycles
+system.l2.overall_miss_rate                  0.076948                       # miss rate for overall accesses
+system.l2.overall_misses                         4456                       # number of overall misses
+system.l2.overall_mshr_hits                         2                       # number of overall MSHR hits
+system.l2.overall_mshr_miss_latency         412802733                       # number of overall MSHR miss cycles
+system.l2.overall_mshr_miss_rate             0.186914                       # mshr miss rate for overall accesses
+system.l2.overall_mshr_misses                   10824                       # number of overall MSHR misses
+system.l2.overall_mshr_uncacheable_latency            0                       # number of overall MSHR uncacheable cycles
+system.l2.overall_mshr_uncacheable_misses            0                       # number of overall MSHR uncacheable misses
+system.l2.prefetch_accuracy                  0.722850                       # ratio of good prefetches to total prefetches
+system.l2.prefetch_hits                          4606                       # number of prefetched blocks that were accessed
+system.l2.prefetcher.num_hwpf_already_in_prefetcher          101                       # number of hwpf that were already in the prefetch queue
+system.l2.prefetcher.num_hwpf_evicted               0                       # number of hwpf removed due to no buffer left
+system.l2.prefetcher.num_hwpf_identified         6542                       # number of hwpf identified
+system.l2.prefetcher.num_hwpf_issued             6439                       # number of hwpf issued
+system.l2.prefetcher.num_hwpf_removed_MSHR_hit            2                       # number of hwpf removed because MSHR allocated
+system.l2.prefetcher.num_hwpf_span_page             0                       # number of hwpf spanning a virtual page
+system.l2.prefetcher.num_hwpf_squashed_from_miss            0                       # number of hwpf that got squashed due to a miss aborting calculation time
+system.l2.replacements                             68                       # number of replacements
+system.l2.sampled_refs                          10739                       # Sample count of references to valid blocks.
+system.l2.soft_prefetch_mshr_full                   0                       # number of mshr full events for SW prefetching instrutions
+system.l2.tagsinuse                       5753.641389                       # Cycle average of tags in use
+system.l2.total_refs                            51591                       # Total number of references to valid blocks.
+system.l2.warmup_cycle                              0                       # Cycle when the warmup percentage was hit.
+system.l2.writebacks                               16                       # number of writebacks
+system.switch_cpus.dtb.data_accesses          2980384                       # DTB accesses
+system.switch_cpus.dtb.data_acv                     0                       # DTB access violations
+system.switch_cpus.dtb.data_hits              2980266                       # DTB hits
+system.switch_cpus.dtb.data_misses                118                       # DTB misses
+system.switch_cpus.dtb.fetch_accesses               0                       # ITB accesses
+system.switch_cpus.dtb.fetch_acv                    0                       # ITB acv
+system.switch_cpus.dtb.fetch_hits                   0                       # ITB hits
+system.switch_cpus.dtb.fetch_misses                 0                       # ITB misses
+system.switch_cpus.dtb.read_accesses          1546342                       # DTB read accesses
+system.switch_cpus.dtb.read_acv                     0                       # DTB read access violations
+system.switch_cpus.dtb.read_hits              1546235                       # DTB read hits
+system.switch_cpus.dtb.read_misses                107                       # DTB read misses
+system.switch_cpus.dtb.write_accesses         1434042                       # DTB write accesses
+system.switch_cpus.dtb.write_acv                    0                       # DTB write access violations
+system.switch_cpus.dtb.write_hits             1434031                       # DTB write hits
+system.switch_cpus.dtb.write_misses                11                       # DTB write misses
+system.switch_cpus.idle_fraction                    1                       # Percentage of idle cycles
+system.switch_cpus.itb.data_accesses                0                       # DTB accesses
+system.switch_cpus.itb.data_acv                     0                       # DTB access violations
+system.switch_cpus.itb.data_hits                    0                       # DTB hits
+system.switch_cpus.itb.data_misses                  0                       # DTB misses
+system.switch_cpus.itb.fetch_accesses        10000121                       # ITB accesses
+system.switch_cpus.itb.fetch_acv                    0                       # ITB acv
+system.switch_cpus.itb.fetch_hits            10000120                       # ITB hits
+system.switch_cpus.itb.fetch_misses                 1                       # ITB misses
+system.switch_cpus.itb.read_accesses                0                       # DTB read accesses
+system.switch_cpus.itb.read_acv                     0                       # DTB read access violations
+system.switch_cpus.itb.read_hits                    0                       # DTB read hits
+system.switch_cpus.itb.read_misses                  0                       # DTB read misses
+system.switch_cpus.itb.write_accesses               0                       # DTB write accesses
+system.switch_cpus.itb.write_acv                    0                       # DTB write access violations
+system.switch_cpus.itb.write_hits                   0                       # DTB write hits
+system.switch_cpus.itb.write_misses                 0                       # DTB write misses
+system.switch_cpus.not_idle_fraction                0                       # Percentage of non-idle cycles
+system.switch_cpus.numCycles                 27456801                       # number of cpu cycles simulated
+system.switch_cpus.num_insts                 10000001                       # Number of instructions executed
+system.switch_cpus.num_refs                   2980384                       # Number of memory references
+system.switch_cpus_1.BPredUnit.BTBCorrect            0                       # Number of correct BTB predictions (this stat may not work properly.
+system.switch_cpus_1.BPredUnit.BTBHits        1627521                       # Number of BTB hits
+system.switch_cpus_1.BPredUnit.BTBLookups      1636888                       # Number of BTB lookups
+system.switch_cpus_1.BPredUnit.RASInCorrect            0                       # Number of incorrect RAS predictions.
+system.switch_cpus_1.BPredUnit.condIncorrect        37977                       # Number of conditional branches incorrect
+system.switch_cpus_1.BPredUnit.condPredicted      1685931                       # Number of conditional branches predicted
+system.switch_cpus_1.BPredUnit.lookups        1707133                       # Number of BP lookups
+system.switch_cpus_1.BPredUnit.usedRAS              0                       # Number of times the RAS was used to get a target.
+system.switch_cpus_1.commit.COM:branches      1550214                       # Number of branches committed
+system.switch_cpus_1.commit.COM:bw_lim_events        30902                       # number cycles where commit BW limit reached
+system.switch_cpus_1.commit.COM:bw_limited            0                       # number of insts not committed due to BW limits
+system.switch_cpus_1.commit.COM:committed_per_cycle::samples      5905044                       # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::mean     1.709521                       # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::stdev     1.770425                       # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::underflows            0      0.00%      0.00% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::0      1312432     22.23%     22.23% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::1      3006703     50.92%     73.14% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::2        42298      0.72%     73.86% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::3        26659      0.45%     74.31% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::4       756735     12.82%     87.13% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::5       727114     12.31%     99.44% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::6         1611      0.03%     99.47% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::7          590      0.01%     99.48% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::8        30902      0.52%    100.00% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::overflows            0      0.00%    100.00% # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::min_value            0                       # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::max_value            8                       # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:committed_per_cycle::total      5905044                       # Number of insts commited each cycle
+system.switch_cpus_1.commit.COM:count        10094798                       # Number of instructions committed
+system.switch_cpus_1.commit.COM:loads         1558455                       # Number of loads committed
+system.switch_cpus_1.commit.COM:membars             0                       # Number of memory barriers committed
+system.switch_cpus_1.commit.COM:refs          3066611                       # Number of memory references committed
+system.switch_cpus_1.commit.COM:swp_count            0                       # Number of s/w prefetches committed
+system.switch_cpus_1.commit.branchMispredicts        37974                       # The number of times a branch was mispredicted
+system.switch_cpus_1.commit.commitCommittedInsts     10094798                       # The number of committed instructions
+system.switch_cpus_1.commit.commitSquashedInsts       756036                       # The number of squashed insts skipped by commit
+system.switch_cpus_1.committedInsts          10000000                       # Number of Instructions Simulated
+system.switch_cpus_1.committedInsts_total     10000000                       # Number of Instructions Simulated
+system.switch_cpus_1.cpi                     0.602507                       # CPI: Cycles Per Instruction
+system.switch_cpus_1.cpi_total               0.602507                       # CPI: Total CPI of All Threads
+system.switch_cpus_1.decode.DECODE:BlockedCycles         2444                       # Number of cycles decode is blocked
+system.switch_cpus_1.decode.DECODE:BranchMispred           77                       # Number of times decode detected a branch misprediction
+system.switch_cpus_1.decode.DECODE:BranchResolved        20635                       # Number of times decode resolved a branch
+system.switch_cpus_1.decode.DECODE:DecodedInsts     11111803                       # Number of instructions handled by decode
+system.switch_cpus_1.decode.DECODE:IdleCycles      3365542                       # Number of cycles decode is idle
+system.switch_cpus_1.decode.DECODE:RunCycles      2536908                       # Number of cycles decode is running
+system.switch_cpus_1.decode.DECODE:SquashCycles       118860                       # Number of cycles decode is squashing
+system.switch_cpus_1.decode.DECODE:SquashedInsts            1                       # Number of squashed instructions handled by decode
+system.switch_cpus_1.decode.DECODE:UnblockCycles          149                       # Number of cycles decode is unblocking
+system.switch_cpus_1.dtb.data_accesses        3203820                       # DTB accesses
+system.switch_cpus_1.dtb.data_acv                   0                       # DTB access violations
+system.switch_cpus_1.dtb.data_hits            3203698                       # DTB hits
+system.switch_cpus_1.dtb.data_misses              122                       # DTB misses
+system.switch_cpus_1.dtb.fetch_accesses             0                       # ITB accesses
+system.switch_cpus_1.dtb.fetch_acv                  0                       # ITB acv
+system.switch_cpus_1.dtb.fetch_hits                 0                       # ITB hits
+system.switch_cpus_1.dtb.fetch_misses               0                       # ITB misses
+system.switch_cpus_1.dtb.read_accesses        1633988                       # DTB read accesses
+system.switch_cpus_1.dtb.read_acv                   0                       # DTB read access violations
+system.switch_cpus_1.dtb.read_hits            1633876                       # DTB read hits
+system.switch_cpus_1.dtb.read_misses              112                       # DTB read misses
+system.switch_cpus_1.dtb.write_accesses       1569832                       # DTB write accesses
+system.switch_cpus_1.dtb.write_acv                  0                       # DTB write access violations
+system.switch_cpus_1.dtb.write_hits           1569822                       # DTB write hits
+system.switch_cpus_1.dtb.write_misses              10                       # DTB write misses
+system.switch_cpus_1.fetch.Branches           1707133                       # Number of branches that fetch encountered
+system.switch_cpus_1.fetch.CacheLines         1682021                       # Number of cache lines fetched
+system.switch_cpus_1.fetch.Cycles             4230244                       # Number of cycles fetch has run and was not squashing or blocked
+system.switch_cpus_1.fetch.IcacheSquashes        10066                       # Number of outstanding Icache misses that were squashed
+system.switch_cpus_1.fetch.Insts             11185274                       # Number of instructions fetch has processed
+system.switch_cpus_1.fetch.SquashCycles         40021                       # Number of cycles fetch has spent squashing
+system.switch_cpus_1.fetch.branchRate        0.283338                       # Number of branch fetches per cycle
+system.switch_cpus_1.fetch.icacheStallCycles      1682021                       # Number of cycles fetch is stalled on an Icache miss
+system.switch_cpus_1.fetch.predictedBranches      1627521                       # Number of branches that fetch has predicted taken
+system.switch_cpus_1.fetch.rate              1.856455                       # Number of inst fetches per cycle
+system.switch_cpus_1.fetch.rateDist::samples      6023904                       # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::mean     1.856815                       # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::stdev     2.728021                       # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::underflows            0      0.00%      0.00% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::0        3475681     57.70%     57.70% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::1         794259     13.19%     70.88% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::2          34774      0.58%     71.46% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::3           8671      0.14%     71.60% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::4         131318      2.18%     73.78% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::5         727069     12.07%     85.85% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::6           3551      0.06%     85.91% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::7         675117     11.21%     97.12% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::8         173464      2.88%    100.00% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::overflows            0      0.00%    100.00% # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::min_value            0                       # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::max_value            8                       # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.fetch.rateDist::total      6023904                       # Number of instructions fetched each cycle (Total)
+system.switch_cpus_1.idleCycles                  1168                       # Total number of cycles that the CPU has spent unscheduled due to idling
+system.switch_cpus_1.iew.EXEC:branches        1625765                       # Number of branches executed
+system.switch_cpus_1.iew.EXEC:nop              190003                       # number of nop insts executed
+system.switch_cpus_1.iew.EXEC:rate           1.737595                       # Inst execution rate
+system.switch_cpus_1.iew.EXEC:refs            3203820                       # number of memory reference insts executed
+system.switch_cpus_1.iew.EXEC:stores          1569832                       # Number of stores executed
+system.switch_cpus_1.iew.EXEC:swp                   0                       # number of swp insts executed
+system.switch_cpus_1.iew.WB:consumers         8562878                       # num instructions consuming a value
+system.switch_cpus_1.iew.WB:count            10447914                       # cumulative count of insts written-back
+system.switch_cpus_1.iew.WB:fanout           0.737336                       # average fanout of values written-back
+system.switch_cpus_1.iew.WB:penalized               0                       # number of instrctions required to write to 'other' IQ
+system.switch_cpus_1.iew.WB:penalized_rate            0                       # fraction of instructions written-back that wrote to 'other' IQ
+system.switch_cpus_1.iew.WB:producers         6313714                       # num instructions producing a value
+system.switch_cpus_1.iew.WB:rate             1.734073                       # insts written-back per cycle
+system.switch_cpus_1.iew.WB:sent             10448371                       # cumulative count of insts sent to commit
+system.switch_cpus_1.iew.branchMispredicts        39771                       # Number of branch mispredicts detected at execute
+system.switch_cpus_1.iew.iewBlockCycles           203                       # Number of cycles IEW is blocking
+system.switch_cpus_1.iew.iewDispLoadInsts      1658259                       # Number of dispatched load instructions
+system.switch_cpus_1.iew.iewDispNonSpecInsts            0                       # Number of dispatched non-speculative instructions
+system.switch_cpus_1.iew.iewDispSquashedInsts        70030                       # Number of squashed instructions skipped by dispatch
+system.switch_cpus_1.iew.iewDispStoreInsts      1600490                       # Number of dispatched store instructions
+system.switch_cpus_1.iew.iewDispatchedInsts     10852633                       # Number of instructions dispatched to IQ
+system.switch_cpus_1.iew.iewExecLoadInsts      1633988                       # Number of load instructions executed
+system.switch_cpus_1.iew.iewExecSquashedInsts        57183                       # Number of squashed instructions skipped in execute
+system.switch_cpus_1.iew.iewExecutedInsts     10469134                       # Number of executed instructions
+system.switch_cpus_1.iew.iewIQFullEvents           15                       # Number of times the IQ has become full, causing a stall
+system.switch_cpus_1.iew.iewIdleCycles              0                       # Number of cycles IEW is idle
+system.switch_cpus_1.iew.iewLSQFullEvents            0                       # Number of times the LSQ has become full, causing a stall
+system.switch_cpus_1.iew.iewSquashCycles       118860                       # Number of cycles IEW is squashing
+system.switch_cpus_1.iew.iewUnblockCycles           15                       # Number of cycles IEW is unblocking
+system.switch_cpus_1.iew.lsq.thread.0.blockedLoads            0                       # Number of blocked loads due to partial load-store forwarding
+system.switch_cpus_1.iew.lsq.thread.0.cacheBlocked           32                       # Number of times an access to memory failed due to the cache being blocked
+system.switch_cpus_1.iew.lsq.thread.0.forwLoads        31807                       # Number of loads that had data forwarded from stores
+system.switch_cpus_1.iew.lsq.thread.0.ignoredResponses         1998                       # Number of memory responses ignored because the instruction is squashed
+system.switch_cpus_1.iew.lsq.thread.0.invAddrLoads            0                       # Number of loads ignored due to an invalid address
+system.switch_cpus_1.iew.lsq.thread.0.invAddrSwpfs            0                       # Number of software prefetches ignored due to an invalid address
+system.switch_cpus_1.iew.lsq.thread.0.memOrderViolation         1983                       # Number of memory ordering violations
+system.switch_cpus_1.iew.lsq.thread.0.rescheduledLoads            0                       # Number of loads that were rescheduled
+system.switch_cpus_1.iew.lsq.thread.0.squashedLoads        99802                       # Number of loads squashed
+system.switch_cpus_1.iew.lsq.thread.0.squashedStores        92332                       # Number of stores squashed
+system.switch_cpus_1.iew.memOrderViolationEvents         1983                       # Number of memory order violations
+system.switch_cpus_1.iew.predictedNotTakenIncorrect         5287                       # Number of branches that were predicted not taken incorrectly
+system.switch_cpus_1.iew.predictedTakenIncorrect        34484                       # Number of branches that were predicted taken incorrectly
+system.switch_cpus_1.ipc                     1.659731                       # IPC: Instructions Per Cycle
+system.switch_cpus_1.ipc_total               1.659731                       # IPC: Total IPC of All Threads
+system.switch_cpus_1.iq.ISSUE:FU_type_0::No_OpClass            0      0.00%      0.00% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::IntAlu      7307685     69.42%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::IntMult            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::IntDiv            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::FloatAdd            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::FloatCmp            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::FloatCvt            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::FloatMult            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::FloatDiv            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::FloatSqrt            0      0.00%     69.42% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::MemRead      1637172     15.55%     84.98% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::MemWrite      1581461     15.02%    100.00% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::IprAccess            0      0.00%    100.00% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::InstPrefetch            0      0.00%    100.00% # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:FU_type_0::total     10526318                       # Type of FU issued
+system.switch_cpus_1.iq.ISSUE:fu_busy_cnt          939                       # FU busy when requested
+system.switch_cpus_1.iq.ISSUE:fu_busy_rate     0.000089                       # FU busy rate (busy events/executed inst)
+system.switch_cpus_1.iq.ISSUE:fu_full::No_OpClass            0      0.00%      0.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::IntAlu          939    100.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::IntMult            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::IntDiv            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::FloatAdd            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::FloatCmp            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::FloatCvt            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::FloatMult            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::FloatDiv            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::FloatSqrt            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::MemRead            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::MemWrite            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::IprAccess            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:fu_full::InstPrefetch            0      0.00%    100.00% # attempts to use FU when none available
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::samples      6023904                       # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::mean     1.747425                       # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::stdev     1.136297                       # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::underflows            0      0.00%      0.00% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::0       495930      8.23%      8.23% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::1      2350554     39.02%     47.25% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::2      2280799     37.86%     85.12% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::3        40128      0.67%     85.78% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::4       799142     13.27%     99.05% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::5        47807      0.79%     99.84% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::6         8634      0.14%     99.98% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::7          905      0.02%    100.00% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::8            5      0.00%    100.00% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::overflows            0      0.00%    100.00% # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::min_value            0                       # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::max_value            8                       # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:issued_per_cycle::total      6023904                       # Number of insts issued each cycle
+system.switch_cpus_1.iq.ISSUE:rate           1.747086                       # Inst issue rate
+system.switch_cpus_1.iq.iqInstsAdded         10662630                       # Number of instructions added to the IQ (excludes non-spec)
+system.switch_cpus_1.iq.iqInstsIssued        10526318                       # Number of instructions issued
+system.switch_cpus_1.iq.iqSquashedInstsExamined       601817                       # Number of squashed instructions iterated over during squash; mainly for profiling
+system.switch_cpus_1.iq.iqSquashedInstsIssued           31                       # Number of squashed instructions issued
+system.switch_cpus_1.iq.iqSquashedOperandsExamined       257058                       # Number of squashed operands that are examined and possibly removed from graph
+system.switch_cpus_1.itb.data_accesses              0                       # DTB accesses
+system.switch_cpus_1.itb.data_acv                   0                       # DTB access violations
+system.switch_cpus_1.itb.data_hits                  0                       # DTB hits
+system.switch_cpus_1.itb.data_misses                0                       # DTB misses
+system.switch_cpus_1.itb.fetch_accesses       1682022                       # ITB accesses
+system.switch_cpus_1.itb.fetch_acv                  0                       # ITB acv
+system.switch_cpus_1.itb.fetch_hits           1682021                       # ITB hits
+system.switch_cpus_1.itb.fetch_misses               1                       # ITB misses
+system.switch_cpus_1.itb.read_accesses              0                       # DTB read accesses
+system.switch_cpus_1.itb.read_acv                   0                       # DTB read access violations
+system.switch_cpus_1.itb.read_hits                  0                       # DTB read hits
+system.switch_cpus_1.itb.read_misses                0                       # DTB read misses
+system.switch_cpus_1.itb.write_accesses             0                       # DTB write accesses
+system.switch_cpus_1.itb.write_acv                  0                       # DTB write access violations
+system.switch_cpus_1.itb.write_hits                 0                       # DTB write hits
+system.switch_cpus_1.itb.write_misses               0                       # DTB write misses
+system.switch_cpus_1.memDep0.conflictingLoads       724428                       # Number of conflicting loads.
+system.switch_cpus_1.memDep0.conflictingStores          527                       # Number of conflicting stores.
+system.switch_cpus_1.memDep0.insertedLoads      1658259                       # Number of loads inserted to the mem dependence unit.
+system.switch_cpus_1.memDep0.insertedStores      1600490                       # Number of stores inserted to the mem dependence unit.
+system.switch_cpus_1.numCycles                6025072                       # number of cpu cycles simulated
+system.switch_cpus_1.rename.RENAME:BlockCycles         1225                       # Number of cycles rename is blocking
+system.switch_cpus_1.rename.RENAME:CommittedMaps      6941630                       # Number of HB maps that are committed
+system.switch_cpus_1.rename.RENAME:IQFullEvents           45                       # Number of times rename has blocked due to IQ full
+system.switch_cpus_1.rename.RENAME:IdleCycles      3377310                       # Number of cycles rename is idle
+system.switch_cpus_1.rename.RENAME:LSQFullEvents         1118                       # Number of times rename has blocked due to LSQ full
+system.switch_cpus_1.rename.RENAME:ROBFullEvents            7                       # Number of times rename has blocked due to ROB full
+system.switch_cpus_1.rename.RENAME:RenameLookups     15807461                       # Number of register rename lookups that rename has made
+system.switch_cpus_1.rename.RENAME:RenamedInsts     11074438                       # Number of instructions processed by rename
+system.switch_cpus_1.rename.RENAME:RenamedOperands      7562775                       # Number of destination operands rename has renamed
+system.switch_cpus_1.rename.RENAME:RunCycles      2525286                       # Number of cycles rename is running
+system.switch_cpus_1.rename.RENAME:SquashCycles       118860                       # Number of cycles rename is squashing
+system.switch_cpus_1.rename.RENAME:UnblockCycles         1222                       # Number of cycles rename is unblocking
+system.switch_cpus_1.rename.RENAME:UndoneMaps       621136                       # Number of HB maps that are undone due to squashing
+system.switch_cpus_1.rename.RENAME:serializeStallCycles            0                       # count of cycles rename stalled for serializing inst
+system.switch_cpus_1.rename.RENAME:serializingInsts            0                       # count of serializing insts renamed
+system.switch_cpus_1.rename.RENAME:skidInsts         1971                       # count of insts added to the skid buffer
+system.switch_cpus_1.rename.RENAME:tempSerializingInsts            0                       # count of temporary serializing insts renamed
+system.switch_cpus_1.timesIdled                    17                       # Number of times that the entire CPU went into an idle state and unscheduled itself
+
+---------- End Simulation Statistics   ----------
