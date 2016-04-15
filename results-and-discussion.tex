@@ -18,11 +18,14 @@ To get an understanding of their characteristics, we implement and
 test the following prefetchers; sequential, SDP, RPT, DC and hybrid.
 Figure \ref{fig:comparison} shows the speedup associated with each
 prefetcher for each benchmark, as well as the average speedup across
-benchmarks calculated by harmonic mean. The \texttt{ammp} benchmark is
-noticably more sensitive to different prefetching strategies than the
-rest. This indicates that \texttt{ammp} spends more time in code for
-which it is easy to make good prefetching predictions relative to the
-other benchmarks.
+benchmarks calculated by harmonic mean. We test with prefetching
+degree varying from $1$ to $7$. For each prefetcher, numbers for the
+plot are taken from the degree yielding the highest average speedup.
+
+The \texttt{ammp} benchmark is noticably more sensitive to different
+prefetching strategies than the rest. This indicates that relative to
+the other benchmarks, \texttt{ammp} spends more time in code for which
+it is easy to make good prefetching predictions.
 
 We see that our hybrid prefetcher has lower average speedup than the
 simple DC implementation.  By comparing the results in greater detail,
