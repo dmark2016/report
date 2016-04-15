@@ -11,10 +11,10 @@ design.  Memory prefetching is a technique to reduce memory access
 times, and an significant amount of research have gone into memory
 prefetchers.
 
-In their paper on strided and sequential prefetching,\textit{Stenstrom
-  et al} \cite{bib:stride} find that sequential prefetching in some
-cases performs better than strided prefetching.  They argue that a
-significant amount of the strides are shorter than the block size.  In
+In their paper on strided and sequential prefetching, \textit{Stenstrom
+et al} \cite{bib:stride} find that sequential prefetching in some
+cases performs better than strided prefetching. They argue that a
+significant amount of the strides are shorter than the block size. In
 testing our RPT implementation, we find that using 8 bits to store
 strides yields speedups of $1.00\pm0.01$ for all prefetching
 degrees. Changing the implementation to use 16 bits increases
