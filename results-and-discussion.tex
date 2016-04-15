@@ -84,12 +84,27 @@ The poor performance of the sequential prefetcher also suggests the stride is
 quite large, such that a sequential fetch of the following block only makes
 performance worse as the extra block is not needed.
 
-The hybrid prefetcher can detect strides, which seems to have given it an
-advantage on low degrees.
-For higher degrees, the sequential prefetcher performs better due to a better
-coverage.
-The accuracy for both prefetchers is about the same for degree 3, where the
-sequential prefetcher performs best.
+\todo{Why does RPT do it badly? Low coverage? Low accuracy?}
+Even though the RPT prefetcher uses strides to predict memory requests, it
+performs worse than the sequential prefetcher for degrees higher than 2.
+As the performance of the hybrid prefetcher does not degrade for higher degrees,
+it is reasonable to assume the RTP part of the hybrid prefetcher is not invoked
+often enough to make a difference for this benchmark.
+
+The only benchmark where the hybrid prefetcher performs notably worse than the
+delta correlating prefetcher is the \texttt{twolf} benchmark.
+Comparing the number of identified prefetches, the hybrid prefetcher identifies
+about 10 times as many as the delta correlating prefetcher.
+These prefetches do not turn out to be beneficial in most cases as can be seen
+from the lower accuracy of the hybrid prefetcher.
+
+Since the hybrid approach uses the same strategy as SDP and RPT when too little
+history is available for delta correlation, poor performance for RPT and SDP is
+also to be expected.
+This proves to be the case as well; the SDP prefetcher has the absolutely worst
+performance.
+Even though it identifies almost the same number of prefetches as the much
+better performing RPT, it falls short on accuracy.
 
 // TODO: Write more in depth analysis that explore why the hybrid prefetcher performs worse than DC.
 
